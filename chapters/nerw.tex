@@ -1,0 +1,112 @@
+\section{położenie ogólne}
+\begin{defi}
+    Powiemy, że punkty $p_1, p_2, \ldots , p_k \in \mathbb{R}^m$ są w \emph{położeniu ogólnym}, jeżeli dla każdego ciągu $l+1$ liczb naturalnych $0< i_0<i_1<\cdots<i_l<k$, $l<m$, punkty $p_{i_0}, p_{i_1},\ldots, p_{i_l}$ tworzą układ afinicznie niezależny.
+\end{defi}
+\begin{przy}
+    Zauważmy, że na płaszczyźnie $\mathbb{R}^2$, zbiór punktów z których każde dowolnie wybrane 3 nie są współliniowe będzie w położeniu ogólnym.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{pictures/polozenie_ogolne.png}
+        \caption{Układ w położeniu ogólnym}
+        \label{fig:polozenie_ogolne}
+    \end{figure}
+    Na rysunku \ref{fig:polozenie_ogolne} punkty $p_1, \ldots, p_7$ twożą oczywiście taki układ.
+\end{przy}
+
+\begin{twie}
+    \label{twie:1_10_2}
+    Dla ciągu punktów $q_1, q_2, \ldots, q_k\in \mathbb{R}^m$ i dla każdej liczby $\alpha>0$ istnieją punkty $p_1, p_2, \ldots , p_k\in \mathbb{R}^m$ w położeniu ogólnym, spełniające $\rho (p_i, q_i)<\alpha$$ \forall i=1,2,\ldots,k$.\\
+    Ponadto, jeżeli układ $r_1, r_2, \ldots , r_l\in R^m$ jest w położeniu ogólnym, to możemy tak wybrać punkty $p_1, p_2, \ldots , p_k\in R^m$ 
+    by $r_1, r_2, \ldots , r_l, p_1, p_2, \ldots , p_k$ również tworzyły układ w położeniu ogólnym.
+\end{twie}
+\begin{proof}
+    Wynika wprost z indukcji:\\
+    $p_1$ zdefiniujemy po prostu jako $q_1$, teraz pokażemy krok indukcjyjny.
+    Załóżmy że punkty $p_1, \ldots, p_{j-1}$ są dobrze zdefiniowane, czyli tworzą układ w położeniu ogólnym oraz spełniają $\rho(p_i, q_i)<\alpha$ dla $i=1, \ldots, j-1$.\\
+    Zauważmy teraz, że każdy co najwyżej $m-1$ elementowy podzbiór punktów $p_1, \ldots, p_{j-1}$ jest afinicznie niezależny, oraz że będą one rozpinały przestrzeń afiniczną wymiaru co najwyżej $m-1$. Czyli jest to zbiór nigdzie gęsty w $\mathbb{R}^m$. Ponieważ wszystkich takich podzbiorów jest skończenie wiele, to suma przestrzeni afinicznych rozpiętych na nich również będzie nigdzie gęsta. Wynika z tego, jesteśmy w stanie znaleźć taki punkt $p_j$ poza tym zbiorem, który będzie spełniał $\rho (p_j, q_j)<\alpha$.\\
+    \\
+    Dowód dla drugiej części twierdzenia jest analogiczny. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/polo_tw_konstrukcja.png}
+        \caption{Szkic konstrukcji}
+        \label{fig:szkic}
+    \end{figure}
+\end{proof}
+
+
+\section{Nerw}
+
+\begin{defi}
+    \cite{alex1927} 
+    Niech $\mathcal{U} = \{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$.
+    \emph{Nerwem} pokrycia $\mathcal{U}$ nazwiemy dowolny kompleks symplicjalny $\mathcal{N(U)}$, 
+    którego wierzchołki możemy ustawić w ciąg $p_1, p_2, \ldots, p_k$ w taki sposób, że
+    \[p_{i_0}p_{i_1} \ldots p_{i_m}\in \mathcal{N(U)} \Leftrightarrow U_{i_0}\cap U_{i_1}\cap \cdots \cap U_{i_m}\neq \emptyset \]
+\end{defi}
+\begin{przy}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/nerw_2.png}
+        \caption{nerw}
+        \label{fig:nerw_2}
+    \end{figure}
+    dodać jakiś opis
+\end{przy}
+\section{twierdzenie o zanużeniu w $R^{2n+1}$}
+
+\begin{twie}
+    Niech $\mathcal{U}=\{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$. Jeżeli krotność pokrycia $\mathcal{U}$ jest conajwyżej $n$, to nerw pokrycia $\mathcal{N(U)}$ możemy zrealizować w $\mathbb{R}^{2n+1}$. \\
+    Ponadto, mając:
+    \begin{itemize}
+        \item $H$ - n-wymiarową podprzestrzeń afiniczną  $R^{2n+1}$,
+        \item punkty $q_1, \ldots, q_k\in R^{2n+1}$,
+        \item liczbę $\alpha>0$
+    \end{itemize} 
+    możemy wybrać nerw $\mathcal{N(U)}$ w taki sposób, by $\mathcal{N(U)}$ nie przecinał podprzestrzeni $H$, oraz by $p_1, \ldots, p_k$ wierzchołki nerwu $\mathcal{N(U)}$ spełniały $\rho(p_i, q_i)<\alpha$ dla $i=1,2,\ldots, k$
+\end{twie}
+\begin{proof}
+    Możemy łatwo zauważyć, że druga część twierdzenia jest rozszerzeniem pierwszej, możemy się więc skupić na udowodnieniu tylko drugiej części.\\
+    Niech $r_1, \ldots, r_{n+1}\in R^{2n+1}$ afinicznie niezależne rozpinające $H$.
+    Z twierdzenia \ref{twie:1_10_2} wiemy, że możemy tak wybrać punkty $p_1, \ldots, p_k\in \mathbb{R}^{2n+1}$ by punkty $r_1, \ldots, r_{n+1}, p_1,\ldots, p_k $ były w położeniu ogólnym. \\
+    Z tego, że $\ord \mathcal{U}\le n$ wiemy, że dla każdego ciągu $l+1$ indeksów $0\le i_0< \cdots < i_l\le k$ takich że $U_{i_0}\cap\cdots \cap U_{i_l}\ne \emptyset$, to $l\le n<2n+1$, czyli punkty odpowiadające tym indeksom: $p_{i_0},\ldots p_{i_l}$ tworzą układ afinicznie niezależny oraz że sympleks na nich zbudowany jest dobrze zdefiniowany. \\
+    Teraz niech $\mathcal{K}$ będzie rodziną sympleksów zdefiniowanych w ten sposób. Teraz pozostaje pokazć, że tak zdefiniowana rodzina jest nerwem $\mathcal{N(U)}$ oraz że $\mathcal{N(U)}\cap H=\emptyset$.\\
+    Zauważmy, że do pokazania że $\mathcal{K}$ jest nerwem, jedyne co trzeba pokazać to że $\mathcal{K}$ jest kompleksem symplicjalnym, czyli że 
+    \begin{enumerate}
+        \item dla każdego sympleksu $S\in \mathcal{K}$ każda jego ściana $S'$ również spełnia $S'\in \mathcal{K}$
+        \item dla każdych $S_1, S_2\in \mathcal{K}$, jeżeli $S_1\cap S_2\ne \emptyset$ to $S_1\cap S_2$ musi być ścianą obu.
+    \end{enumerate}
+    dowód 1:\\
+    Zauważmy, że skoro sympleks w $S$ oparty na wierzchołkach $p_{i_0}, \ldots, p_{i_l}$ jest w $\mathcal{K}$, to $U_{i_0}\cap\cdots\cap U_{i_l}\ne \emptyset$. Za tym od razu idzie że przecięcie każdego podzbioru $\{ U_{i_0}, \ldots, U_{i_l}\}$ musi również być niepuste, tak więc każda ściana $S$ również będzie należała do $\mathcal{K}$.
+    \\
+    dowód 2:\\
+    Weźmy $S_1, S_2\in \mathcal{K}$, $S_1$ oparty na $p_{i_0}, \ldots, p_{i_l}$, $S_2$ oparty na $p_{j_0}, \ldots, p_{j_m}$, $l, m\le n$.\\
+    Załóżmy, że sympleksy oparte są na dokładnie $0\le a\le \min(l+1, m+1)$ takich samych wierzchołkach. Możemy w takim razie tak je przeindeksować, by spełnione było:
+    \[p_{i_s}=p_{j_s} \;\; \mathrm{dla} \;\;s=0,1,\ldots, a-1\]
+    \[p_{i_a}, \ldots, p_{i_l}, p_{j_a},\ldots,  p_{j_m}\;\; \mathrm{parami\;\;różne}\]
+    Weźmy dowolny punkt $p$ należący do przecięcia $S_1\cap S_2$. Zauważmy że skoro $p\in S_1$, to możemy przedstawić punkt $p$ jako:
+    \[p=\sum _{s=0}^l \lambda_sp_{i_s}, \;\; \sum_{s=0}^l\lambda_s=1,
+    \lambda_s\ge 0\forall_{s=0,1, \ldots, l} \]
+    podobnie z $p\in S_2$ dostajemy:
+    \[p=\sum _{t=0}^m \lambda'_tp_{i_t}, \;\; \sum_{t=0}^m\lambda'_t=1,
+    \lambda'_t\ge 0\forall_{t=0,1, \ldots, m} \]
+    Dostajemy w takim razie układ równań:
+    \[\sum _{s=0}^l \lambda_sp_{i_s}- \sum _{t=0}^m \lambda'_tp_{i_t} = 
+    0\]
+    \[\sum _{s=0}^l \lambda_s - \sum _{t=0}^m \lambda'_t = 0\]
+    Pierwsze równanie możemy uprościć do postaci:
+    \[
+    \sum _{s=0}^a (\lambda_s-\lambda'_s)p_{i_s} +
+    \sum _{s=a}^l \lambda_sp_{i_s}- \sum _{t=a}^m \lambda'_tp_{i_t} = 
+    0\]
+    Zauważmy, że skoro $l, m\le n$, czyli $2+m+l\le 2n+2$, to punkty 
+    $p_{i_0}, \ldots, p_{i_l},p_{j_a}\ldots ,p_{j_m}$ będą tworzyły układ afinicznie niezależny, z czego wynika że wszystkie wpółczynniki w powyższym równianiu muszą być równe 0, za czym idzie:
+    \[\lambda_s=\lambda'_s,  \;\;\mathrm{dla}\;\;s=0,\ldots, a-1 \]
+    \[\lambda_s = 0, \;\;\mathrm{dla}\;\;s=a, \ldots,l\]
+    \[\lambda'_s=0,  \;\;\mathrm{dla}\;\;\;s=a,\ldots, m\]
+    W takim razie punkt $p$ możemy rozpisać jako
+    \[p=\sum_{s=0}^{a-1}\lambda_sp_{i_s}=\sum_{s=0}^{a-1}\lambda'_sp_{j_s}\]
+    czyli punkt $p$ należy również do sympleksu opartego na $p_{i_0}, \ldots, p_{i_{a-1}}$, który jest ścianą obu sympleksów $S_1, S_2$, co kończy dowód.
+    Wynika z tego, że $\mathcal{K}$ faktycznie jest nerwem pokrycia $\mathcal{U}$.\\
+    Do skończenia dowodu twierdzenia wystarczy pokazać, że $H\cap \mathcal{K}=\emptyset$, jest to jednak analogiczne do powyższego.
+\end{proof}

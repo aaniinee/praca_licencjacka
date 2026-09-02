@@ -1,0 +1,95 @@
+% \section{podstawowe definicje}
+% ewentualnie dodać definicje 
+% \begin{itemize}
+%     \item afinicznej niezależności
+% \end{itemize}
+W tej części, zdefiniujemy pojęcie wielościanu, oraz inne powiązane z nim definicje i własności.
+
+
+\section{sympleksy}
+\begin{defi}
+    Niech punkty $p_0, p_1, \cdots, p_n$ będą afinicznie niezależne w przestrzeni $\mathbb{R}^m$. Wtedy \emph{n-sympleksem} rozpiętym na punktach $p_0, p_1, \cdots , p_n$ (oznaczmy $\Delta(p_0, p_1, \cdots , p_n)$ ) nazwiemy podzbiór punktów $p$ należących do przestrzeni $\mathbb{R}^m$ spełniających
+    \[p=\lambda_0 p_0+ \lambda_1 p_1 +\cdots + \lambda_n p_n\]
+    \[\sum _{i=0}^n \lambda_i = 1, \;\; \lambda _i\geq 0 \;\forall i=0,1,\ldots,n\]
+    Wagi $\lambda_i, i=0,1,\ldots,n$ nazywane \emph{współrzędnymi barycentrycznymi}, są wyznaczone jednoznacznie.
+    \begin{figure}[H]
+        \centering
+        % \includegraphics[width=0.8\textwidth]{pictures/sympleksy.png}
+        \input{pictures/sympleksy0123}
+        \caption{0,1,2,3-sympleksy w przestrzeni $\mathbb{R}^3$}
+        \label{fig:sympleksy}
+    \end{figure}
+\end{defi}
+Inna znana definicja sympleksu to $\Delta(p_0, p_1, \cdots , p_n)=conv(\{p_0, p_1, \cdots , p_n\})$, czyli najmniejszy zbiór wypukły, zawierający punkty $p_0, p_1, \cdots , p_n$. Łatwo możemy pokazać, że będzie to również zbiór zwarty w $\mathbb{R}^m$
+
+Zauważmy, że kożystając z jednoznaczości współrzędnych barycentrycznych, wszystkie $n$-sympleksy będą wzajemnie homeomorficzne, a dodając do tego ciągłość rzutowania na współrzędne, możemy pokazać ich homeomorficzność z hiperkostką $I^n$, z czego od razu dostajemy, że wymiar pokryciowy każdego $n$-sympleksu będzie dokładnie $n$. 
+
+Teraz wprowadzimy kilka pomocniczych definicji
+
+\begin{defi}
+    \emph{k-wymiarową ścianą} n-sympleksu rozpiętego na punktach $p_0, p_1, \ldots, p_n$ $(0\le k\le n)$ nazwiemy każdy k-sympleks rozpięty na punktach $p_{i_0}, p_{i_1},\ldots, p_{i_k}$ dla parami różnych $0\le i_j\le n$, $0\le j\le k$.\\
+    0-wymiarowe ściany nazwiemy \emph{wierzchołkami}, \\
+    \emph{brzegiem}, nazwiemy zbiór $S$ - zbiór wszystkich k-wymiarowych ścian,
+    dopełnienie brzegu - \emph{wnętrzem}.
+\end{defi}
+
+\section{wielościany}
+\begin{defi}
+    \emph{Kompleksem symplicjalnym} (lub po prostu kompleksem), nazwiemy dowolną skończoną rodzinę $\mathcal{K}$ sympleksów w przestrzeni euklidesowej spełniającą:
+    \begin{itemize}
+        \item jeżeli sympleks $S$ należy do $\mathcal{K}$, to każda ściana $S_0$ sympleksu $S$, również należy do $\mathcal{K}$,
+        \item jeżeli sympleksy $S_1, S_2$ należą do kompleksu $\mathcal{K}$, to ich przecięcie $S_1 \cap S_2$ jest puste lub jest ścianą obu sympleksów.
+    \end{itemize}
+    0-sympleksy w $\mathcal{K}$ nazywamy \emph{wierzchołkami}, a każdą podrodzinę $\mathcal{K}_0\subset \mathcal{K}$ która też jest kompleksem nazwiemy \emph{podkompleksem $\mathcal{K}$}.
+    \begin{figure}[H]
+        \centering
+        % \includegraphics[width=0.8\textwidth]{pictures/kompleks.png}
+        \input{pictures/kompleks}
+        \caption{kompleks symplicjalny}
+        \label{fig:kompl}
+    \end{figure}
+\end{defi}
+\begin{przy}
+       
+% todo przykład
+przykład
+\end{przy}
+% todo wymiar kompleksu
+\begin{defi}
+    Jeżeli $\mathcal{K}$ jest kompleksem symplicjalnym, to \emph{bryłą} nazwiemy zbiór punktów
+    \[|\mathcal{K}|=\bigcup \{S:S\in \mathcal{K}\}\]
+\end{defi}
+
+\begin{defi}
+    Każdy zbiór $W\in R^n$ dla którego istnieje kompleks symplicjalny $\mathcal{K}$ taki, że $W=|\mathcal{K}|$ 
+    nazwiemy \emph{wielościanem}. $\mathcal{K}$ nazwiemy \emph{triangulacją}
+\end{defi}
+Przez wymiar wielościanu, uznamy wymiar największego $n$-sympleksu zawierającego się w jego triangulacji. Łatwo możemy pokazać, że tak wybrane $n$ nie zależy od wybranej triangulacji, a jedynie od samego wielościanu. Tak zdefiniowaną wartość, nazwiemy wymiarem geometrycznym wielościanu. Wynika zatem, że dla wielościanu wymiar geometryczny i pokryciowy pokrywają się. 
+
+Warto zauważyć, że współrzędne barycentryczne można przedłużyć z sympleksów do całego wielościanu:\\ mając wielościan $K=|\mathcal{K}|$ kompleksu $\mathcal{K}$ oraz jego wierzchołki $p_0, \ldots, p_k$ każdy punkt $p\in K$ możemy reprezentować przez
+\[p=\lambda_0 p_0+\cdots +\lambda_k p_k\]
+dla $\lambda_0 +\cdots +\lambda_k=1$ oraz $\lambda_i\ge 0\;\;\; \forall i=0, \ldots, k$.
+Oczywiście też, jeżeli $\lambda_{i_j}>0$, $j=0, \ldots, l$ to punkt $p$ musi zawierać się w $l-$sympleksie $\Delta(p_{i_0}, \ldots, p_{i_l})$. Jest to również najmniejszy (ze względu na wymiar) sympleks zawierający punkt $p$.\\
+Korzystając z tak wprowadzonych współczynników, zdefiniujemy tak zwane \emph{gwiazdy}.
+
+\begin{defi}
+    Dla każdego wierzchołka $p_i$ kompleksu symplicjalnego $\mathcal{K}$, \emph{gwiazdą rozpiętą w punkcie $p_i$} nazwiemy zbiór
+    \[
+     \St_{\mathcal{K}}(p_i) = 
+     |\mathcal{K}| \backslash \bigcup\{ S\in \mathcal{K}\;|\;p_i\not \in S\}
+    \]
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/gwiazda.png}
+        \caption{Gwiazda}
+        \label{fig:gwiazda}
+    \end{figure}
+\end{defi}
+Łatwo możemy pokazać, że 
+$
+\St_{\mathcal{K}}(p_i) = 
+     \{ p\in |\mathcal{K}|\;:\;\lambda_i>0\}
+$,
+z czego wynika, że gwiazdy są otwartymi podzbiorami wielościanu $|\mathcal{K}|$
+
+Mimo, że technicznie kompleksy symplicjalne i wielościany są innymi obiektami, w dalszej części pracy będziemy je utożsamiać ze sobą, w części której nam jest to potrzebne używać własności kompleksu symplicjalnego, w innej odpowiadającemu mu wielościanu.

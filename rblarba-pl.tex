@@ -1,0 +1,170 @@
+%
+% Niniejszy plik stanowi przykład formatowania pracy magisterskiej na
+% Wydziale MIM UW.  Szkielet użytych poleceń można wykorzystywać do
+% woli, np. formatujac wlasna prace.
+%
+% Zawartosc merytoryczna stanowi oryginalnosiagniecie
+% naukowosciowe Marcina Wolinskiego.  Wszelkie prawa zastrzeżone.
+%
+% Copyright (c) 2001 by Marcin Woliński <M.Wolinski@gust.org.pl>
+% Poprawki spowodowane zmianami przepisów - Marcin Szczuka, 1.10.2004
+% Poprawki spowodowane zmianami przepisow i ujednolicenie 
+% - Seweryn Karłowicz, 05.05.2006
+% Dodanie wielu autorów i tłumaczenia na angielski - Kuba Pochrybniak, 29.11.2016
+
+% dodaj opcję [licencjacka] dla pracy licencjackiej
+% dodaj opcję [en] dla wersji angielskiej (mogą być obie: [licencjacka,en])
+\documentclass[licencjacka]{pracamgr}
+
+
+% Dane magistranta:
+\autor{Urszula Papiernik}{448554}
+
+
+% Dane magistrantów:
+%\autor{Urszula Papiernik}{448554}
+
+\title{Wymiar Pokryciowy: charakteryzacja za pomocą $\varepsilon$-przekształceń}
+
+
+\tytulang{ Covering Dimension: characterization via $\varepsilon$-mappings }
+
+%kierunek: 
+% - matematyka
+% - Mathematics
+\kierunek{matematyka}
+
+% informatyka - nie okreslamy zakresu (opcja zakomentowana)
+% matematyka - zakres moze pozostac nieokreslony,
+% a jesli ma byc okreslony dla pracy mgr,
+% to przyjmuje jedna z wartosci:
+% {metod matematycznych w finansach}
+% {metod matematycznych w ubezpieczeniach}
+% {matematyki stosowanej}
+% {nauczania matematyki}
+% Dla pracy licencjackiej mamy natomiast
+% mozliwosc wpisania takiej wartosci zakresu:
+% {Jednoczesnych Studiow Ekonomiczno--Matematycznych}
+
+% \zakres{Tu wpisac, jesli trzeba, jedna z opcji podanych wyzej}
+
+% Praca wykonana pod kierunkiem:
+% (podać tytuł/stopień imię i nazwisko opiekuna
+% Instytut
+% ew. Wydział ew. Uczelnia (jeżeli nie MIM UW))
+\opiekun{dr. Andrzeja Nagórko
+  }
+
+% miesiąc i~rok:
+\date{Maj 2026}
+
+%Podać dziedzinę wg klasyfikacji Socrates-Erasmus:
+\dziedzina{ 
+%11.0 Matematyka, Informatyka:\\ 
+11.1 Matematyka\\ 
+%11.3 Informatyka\\ 
+}
+
+%Klasyfikacja tematyczna wedlug AMS (matematyka) lub ACM (informatyka)
+\klasyfikacja{
+  54 General Topology\\
+  54F45 Dimension theory in general topology
+  % D. Software\\
+  % D.127. Blabalgorithms\\
+  % D.127.6. Numerical blabalysis
+  }
+
+% Słowa kluczowe:
+\keywords{
+  wymiar pokryciowy, wielościany, $\epsilon$-przekształcenia, 
+% blabaliza różnicowa, fetory $\sigma$-$\rho$, fooizm,
+  % blarbarucja, blaba, fetoryka, baleronik
+  }
+
+% Tu jest dobre miejsce na Twoje własne makra i~środowiska:
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+
+\usepackage[
+    backend=biber,
+    style=numeric,
+    sorting=none
+]{biblatex}
+\addbibresource{bibliografia.bib}
+\usepackage[hidelinks]{hyperref}
+
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\St}{St}
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Fr}{Fr}
+
+
+\newtheorem{defi}{Definicja}[chapter]
+\newtheorem{twie}[defi]{Twierdzenie}
+\newtheorem{wnio}[defi]{Wniosek}
+\theoremstyle{definition}
+\newtheorem{przy}[defi]{Przykład}
+
+% koniec definicji
+
+\begin{document}
+
+\maketitle
+
+%tu idzie streszczenie na strone poczatkowa
+\begin{abstract}
+  todo
+\end{abstract}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\chapter*{Wprowadzenie}
+\input{chapters/intro}
+\addcontentsline{toc}{chapter}{Wprowadzenie}
+
+\chapter{Wymiar pokryciowy}
+\input{chapters/wymiar_pokryciowy}
+
+% \chapter{Teoria wymiaru}
+% \input{chapters/teoria_wymiaru}
+
+\chapter{Wielościany}
+\input{chapters/wielosciany}
+
+\chapter{Nerw}
+\input{chapters/nerw}
+
+\chapter{Twierdzenie o $\varepsilon$-przekształceniach}
+\input{chapters/twierdzenie_o_przeksztalceniach}
+
+\printbibliography
+
+% \begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliografia}
+
+% \bibitem[Eng]{engelking_} Ryszard Engelking, \textit{Theory of dimensions, Finite and 
+%     Infinite}, 1995
+
+% \bibitem[Eng]{engelking} J. van Mill, \textit{Infinite dimenional Topology, 
+%     Prerequisites and Introduction}
+
+
+% \end{thebibliography}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% coding: latin-2
+%%% End:

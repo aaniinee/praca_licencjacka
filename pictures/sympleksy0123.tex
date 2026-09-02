@@ -1,0 +1,65 @@
+
+\begin{tikzpicture}[scale=1.2]
+
+% ============================================
+% 1. PUNKT
+% ============================================
+\begin{scope}[shift={(-4,0)}]
+    \fill (0,0) circle[radius=3pt];
+\end{scope}
+
+% ============================================
+% 2. ODCINEK
+% ============================================
+\begin{scope}[shift={(-2,0)}]
+    \draw[thick] (0,-1) -- (0,1);
+    \fill (0,-1) circle[radius=2pt];
+    \fill (0,1) circle[radius=2pt];
+\end{scope}
+
+% ============================================
+% 3. TRÓJKĄT
+% ============================================
+\begin{scope}[shift={(0,-0.5)}]
+     \fill[gray!20] (0,0) -- (2,0) -- (1,1.5) -- cycle;
+    \draw[thick] (0,0) -- (2,0) -- (1,1.5) -- cycle;
+    \fill (0,0) circle[radius=2pt];
+    \fill (2,0) circle[radius=2pt];
+    \fill (1,1.5) circle[radius=2pt];
+\end{scope}
+
+% ============================================
+% 4. OSTROSŁUP TRÓJKĄTNY
+% ============================================
+\begin{scope}[shift={(4,-0.5)}]
+    \tdplotsetmaincoords{70}{120}
+    \begin{scope}[tdplot_main_coords, scale=0.8]
+        
+        % Wierzchołki
+        \coordinate (A) at (0,0,0);
+        \coordinate (B) at (2,0,0);
+        \coordinate (C) at (0.5,1.5,0);
+        \coordinate (S) at (0.8,0.6,2.5);
+        
+        \fill[gray!20] (S) -- (C) -- (B) -- cycle;
+        
+        % Krawędzie podstawy
+        \draw[thick] (B)-- (C);
+        \draw[dashed] (B) -- (A);
+        \draw[dashed] (C) -- (A);
+        
+        % Krawędzie boczne
+        \draw[thick] (S) -- (C);
+        \draw[thick] (S) -- (B);
+        \draw[dashed] (S) -- (A);
+        
+        % Wierzchołki
+        \fill (A) circle[radius=2pt];
+        \fill (B) circle[radius=2pt];
+        \fill (C) circle[radius=2pt];
+        \fill (S) circle[radius=2pt];
+        
+    \end{scope}
+\end{scope}
+
+\end{tikzpicture}

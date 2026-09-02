@@ -1,0 +1,174 @@
+\section{Cel}
+W tym rozdziale przedstawimy twierdzenie które jest celem całej pracy czyli Twierdzenie o $\varepsilon$-przekształceniach. 
+\begin{twie}
+    \label{twie:o_prz}
+    Zwarta przestrzeń metryczna $X$ ma wymiar pokryciowy co najwyżej $n$ wtedy i tylko wtedy, 
+    gdy dla każdego $\varepsilon >0$ istnieje $\varepsilon$-przekształcenie $X$ w wielościan wymiaru co najwyżej $n$.
+\end{twie}
+Dla ułatwienia, dowodzić je będziemy równolegle z bardzo podobnym twierdzeniem, o $\epsilon-$mapach. 
+\begin{twie}
+    \label{twie:o_map}
+    Zwarta przestrzeń metryczna $X$ ma wymiar pokryciowy co najwyżej $n$ wtedy i tylko wtedy, gdy dla każdego skończonego otwartego pokrycia $\epsilon$ przestrzeni $X$ istnieje $\epsilon-$mapa $X$ w wielościan wymiaru co najwyżej $n$.
+\end{twie}
+
+
+\section{$\varepsilon$-przekształcenie}
+Zacznijmy od wprowadzenia definicji $\varepsilon$-przekształcenia oraz $\epsilon-$mapy.
+\begin{defi} % 1.10.9
+    Niech $\varepsilon>0$, oraz niech $f:X\rightarrow Y$ ciągłe przekształcenie przestrzeni metrycznej $X$ w przestrzeń topologiczną $Y$. 
+    Wtedy, powiemy że $f$ jest \emph{$\epsilon$-przekształceniem}, jeżeli dla każdego punktu w $Y$ średnica przeciwobrazu w tym punkcie jest miejsza od $\varepsilon$, czyli  $\forall y\in Y \; \delta(f^{-1}(y))<\varepsilon$ 
+\end{defi}
+\begin{przy}
+    Weźmy ciąg funkcji ciągłych $f_n:[0,1]\rightarrow[0,1]$ z odcinka $[0,1]$ w ten sam odcinek, zdefiniowanych
+    \[
+    f_n(x) =
+    \begin{cases}
+        0,                            & x \le \frac{1}{n+1},\\
+        \frac{n+1}{n-1}(x-\frac{1}{n-1}), & x \in (\frac{1}{n+1}, \frac{n}{n+1}), \\
+        1,                            & x\ge \frac{n}{n+1}.\\
+    \end{cases}
+    \]
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/eps_funkcja_przyklad.png}
+        \caption{eps}
+        \label{fig:eps_2}
+    \end{figure}
+    łatwo możemy sprawdzić, że tak zdefiniowane funkcje $f_n$ są odpowiednio $\frac{1}{n}$-przeksztaceniami (rysunek \ref{fig:eps_2})
+\end{przy}
+
+\begin{defi} % 1.10.8
+    Niech $\epsilon$ będzie otwartym pokryciem przestrzeni $X$, oraz niech $f:X\rightarrow Y$ niech będzie ciągłym przekształceniem przestrzeni $X$ w przestrzeń topologiczną $Y$.\\
+    Powiemy że $f$ jest \emph{$\epsilon$-mapą}, jeżeli istnieje $\mathcal{U}$ takie  otwarte pokrycie $Y$, że przeciwobraz $f^{-1}(\mathcal{U})$ jest zwężeniem $\epsilon$.
+\end{defi}
+
+\begin{przy}
+    Weźmy pokrycie odcinka $(0,1)=I$ $U=\{(\frac{i-1}{n}, \frac{i+1}{n})\:| \; i=1, \ldots, n-1\}$. \\
+    Rozpatrzmy otwarty kwadrat $(0,1)\times (0,1)$ i jego dwa pokrycia
+    \[U_1 = U\times I\;\;\;\mathrm{oraz}\;\;\; U_2 = I\times U.\]
+    % todo rysunek
+    Wtedy rzutowanie na pierwszą współrzędną $\pi_1:I^2\rightarrow I$, $\pi_1(x_1,x_2)=x_1$ będzie oczywiście $U_1$-mapą, ale nie będzie $U_2$-mapą. 
+\end{przy}
+
+Teraz pokażemy twierdzenie, które pokazuje nam zależność między tymi dwoma definicjami
+
+
+\begin{twie}
+    \label{twie:map_a_prze}
+    Niech $X$ będzie zwartą przestrzenią metryczną, wtedy dla każdego otwartego pokrycia $\mathcal{U}$ przestrzeni $X$, istnieje taka liczba dodatnia $\varepsilon>0$, że każde $\varepsilon-$przekształcenie w przestrzeń Hausdorffa jest też $\mathcal{U}-$mapą.
+\end{twie}
+\begin{proof}
+    Weźmy dowolne otwarte pokrycie $\mathcal{U}$ przestrzeni $X$. Teraz niech $\varepsilon>0$ będzie liczbą Lebesque'a pokrycia $\mathcal{U}$ - czyli taka wielkość, że dla każdego podzbioru $A\subset X$, jeżeli średnica $\delta(A)$ jest mniejsza od $\varepsilon$, to $A$ zawiera się w którymś elemencie pokrycia $\mathcal{U}$.\\
+    Weźmy teraz dowolne $\varepsilon$-przekształcenie $f:X\rightarrow Y$, gdzie $Y$ to przestrzeń Hausdorffa. Pokażemy, że musi ono być również $\mathcal{U}$-mapą.\\
+    Zauważmy, że dla każdego elementu $y\in Y$ możemy znaleźć taki element pokrycia $U_y\in \mathcal{U}$, dla którego $f^{-1}(y)\subset V_y$. Z tego że funkcja $f$ jest przekształceniem ciągłym z przestrzeni zwartej w przestrzeń Hausdorffa wiemy, że jest zamknięta na zbiory zamknięte, więc zbiór
+    \[V_y = Y\backslash f(X\backslash U_y)\]
+    jest oczywiście otwarty. Łatwo możemy sprawdzić, że $y\in V_y$, oraz że $f^{-1}(V_y)\subset U_y$. \\
+    W takim razie zbiór $\mathcal{V} = \{V_y\}_{y\in Y}$ będzie pokryciem przestrzeni $Y$ spełniającym $f^{-1}(V)$ jest wpisaniem $\mathcal{U}$, co kończy dowód.
+\end{proof}
+Udowodnimy teraz dwa twierdzenia pomocnicze. 
+\begin{twie} % 1.10.11
+    \label{twie:1_10_11}
+    Jeżeli dla każdego otwartego skończonego pokrycia $\mathcal{U}$ przestrzeni normalnej $X$ istnieje $\mathcal{U}-$mapa w przestrzeń zwartą $Y$ wymiaru conajwyżej $n$, to $\dim X\le n$.
+\end{twie}  
+\begin{proof}
+    Weźmy dowolne otwarte skończone pokrycie $\mathcal{U}$ przestrzeni $X$, oraz niech $f:X\rightarrow Y$ będzie $\mathcal{U}-$mapą w przestrzeń $Y$, $\dim Y\le n$.\\
+    Niech $\mathcal{V}$ będzie takim otwartym pokryciem $Y$, że $f^{-1}(\mathcal{V})$ jest wpisaniem $\mathcal{U}$. Teraz skoro $Y$ jest zwarte, to $\mathcal{V}$ ma skończone otwarte wpisanie $\mathcal{V'}$, a kożystając z $\dim Y\le n$ wiemy, że dla $\mathcal{V'}$ możemy znaleźć otwarte wpisanie $\mathcal{W}$, które spełnia $\ord \mathcal{W\le n}$. \\
+    Zauważmy teraz, że $f^-1(\mathcal{W})$ też jest skończonym otwartym pokryciem $X$, które jest wpisane w $\mathcal{U}$ i spełnia $\ord f^{-1}(\mathcal{W})\le n$, skąd wynika $\dim X \le n$, co kończy dowód.
+\end{proof}
+
+\begin{twie} % 1.10.12
+    \label{twie:1_10_12}
+    Jeżeli dla każdej liczby $\varepsilon>0$ istnieje $\varepsilon-$przekształcenie zwartej przestrzeni metryczenej $X$ w zwartą przestrzeń $Y$ wymiaru conajwyżej $n$, to $\dim X\le n$
+\end{twie}
+\begin{proof}
+    Zauważmy, że dowód tego twierdzenia wynika wprost z twierdzeń \ref{twie:1_10_11} oraz \ref{twie:map_a_prze}: \\
+    Weźmy $\mathcal{U}$-dowolne otwarte pokrycie przestrzeni $X$ i jako $\varepsilon>0$ weźmy liczbę Lebesque'a tego pokrycia. Teraz wiemy, że możemy znaleźć $\varepsilon$-przekształcenie $f:X\rightarrow Y$ które będzie też $\mathcal{U}$-mapą, więc $\dim X\le n$.
+\end{proof}
+
+Zauważmy, że twierdzenia \ref{twie:1_10_12} oraz \ref{twie:1_10_11} są tak naprawdę implikacjami w jedną stronę twierdzeń \ref{twie:o_prz} oraz \ref{twie:o_map}, jeżeli lekko zmodyfikujemy ich treści i zamienimy dowolną przestrzeń zwartą $Y$ wymiaru $\dim Y \le n$ w wielościan wymiaru $n$, dowód będzie przebiegał bardzo podobnie. \\
+W takim razie, do dokończenia dowodów, jedyne co zostaje nam pokazać, to że zawsze jesteśmy w stanie takie przekształcenia znaleźć.
+
+\section{Funkcja $\kappa$-Kuratowskiego}
+\begin{defi}
+    Niech $\mathcal{U} = \{U_i \} _{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$ oraz niech $p_1, p_2, \ldots, p_k \in \mathbb{R}^m$ Bedzie ciągiem punktów.\\
+    Ciągłe przekształcenie z przestrzeni $X$ w $\mathbb{R}^m$ $\kappa :X\rightarrow R^m$ zdefiniujmy jako
+    \[\kappa(x) = \kappa_1(x)p_1+\kappa_2(x)p_2+\cdots+\kappa_k(x)p_k \]
+    gdzie 
+    \[\kappa_i(x) = \frac{\rho(x, X\backslash U_i)}{\sum _{j=1}^k\rho(x, X\backslash U_j)}\]
+    Taką funkcję nazwiemy funkcją \emph{$\kappa$-Kuratowskiego}.
+    \cite{kuratowski1933}
+\end{defi}
+Zacznijmy od pokazania, że tak zdefiniowana funkcja jest dobrze określona, jako że jeżeli $x\in X$ należy do $U_i$, to $\rho(x, X\backslash U_i)>0$, za czym idzie 
+$\sum _{j=1}^k\rho(x, X\backslash U_j)>0 \;\;\;\forall x\in X$, ponieważ $\mathcal{U}$ jest pokryciem.\\
+Własnością na którą warto zwrócić uwagę, jest to dla każdego $x\in X$ zachodzi $\sum_{i=1}^{k}\kappa_i(x)=1$, oraz oczywiście wszystkie $\kappa_i(x)\ge 0$.\\
+
+Udowodnikmy teraz dwa twierdzenia, pierwsze mówi o przybliżaniu ciągłych przekształceń funkcjami $\kappa-$Kuratowskiego, a drugie jest o własnościach tej funkcji.
+
+\begin{twie} % 1.10.6
+    Niech $f:X\rightarrow \mathbb{R}^m$ będzie ciągłym przekształceniem przestrzeni metrycznej $X$ w przestrzeń euklidesową $\mathbb{R}^m$ oraz niech $\delta>0$. \\
+    Jeżeli $\mathcal{U} = \{U_i\}_{i=1}^k$ jest otwartym pokryciem $X$, a punkty $p_1, \ldots ,p_k \in R^m$ spełniają
+    \[\delta(\{p_i\}\cup f(U_i))<\delta\]
+    to $\kappa$-przekształcenie określone przez $\mathcal{U}$ oraz $p_1, \ldots, p_k$ spełnia 
+    \[\rho(f(x), \kappa(x))<\delta\forall x\in X\]
+\end{twie}
+\begin{proof}
+    Weźmy $x\in X$, i niech $U_{i_0}, \ldots, U_{i_l}$ będą tymi elementami pokrycia, które zawierają $x$. Teraz, z definicji funkcji $\kappa$ wiemy, że 
+    $\kappa_i(x) = 0$ dla wszystkich indeksów poza $i_0, \ldots, i_l$. Z warunku w twierdzeniu dostajemy, że dla $j=0, \ldots, l$ zachodzi
+    \[||f(x) - p_{i_j}|| = \rho(f(x), p_{i_j})< \delta\]
+    gdzie $||\cdot ||$ to oczywiście norma. A stąd kożystając z nierówności trójkąta
+    \[\rho(f(x), \kappa(x)) = ||f(x), \kappa(x)|| = \]
+    \[||\sum_{i=1}^k \kappa_i(x)\cdot f(x) - \sum_{i=1}^k \kappa_i(x)\cdot p_{i}|| =\]
+    \[||\sum_{j=0}^l \kappa_{i_j}(x)\cdot f(x) - \sum_{j=0}^l \kappa_{i_j}(x)\cdot p_{i_j}|| \le\]
+    \[\sum_{j=0}^l \kappa_{i_j}(x) \cdot ||f(x)-p_{i_j}||< \delta\cdot\sum_{j=0}^l \kappa_{i_j}(x) = \delta\]
+    co kończy dowód.
+\end{proof}
+
+\begin{twie} % 1.10.7
+    \label{twie:1_10_7}
+    Niech $\mathcal{U} = \{U_i\}_{i=1}^k$ będzie otwartym skończonym pokryciem przestrzeni metrycznej $X$, a $\mathcal{N(U)}$ będzie nerwem tego pokrycia, o wierzchołkach $p_1, \ldots, p_k\in R^m$. 
+    Wtedy, przekształcenie $\kappa$ określone przez pokryie $\mathcal{U}$ oraz punkty $p_1, \ldots, p_k$ spełnia:
+    \[\kappa(X) \subset \mathcal{N(U)}\]
+    oraz
+    \[\kappa ^{-1}(St_{\mathcal{N(U)}}(p_i))=U_i\;\;\;\;\ \forall i =1, \ldots, k\] 
+\end{twie}
+\begin{proof}
+    Weźmy $x\in X$ oraz niech $U_{i_0}, \ldots, U_{i_l}$ będą elementami pokrycia zawierającymi $x$. Wiemy, że $U_{i_0}\cap  \ldots\cap U_{i_l} \ne \emptyset$ bo oczywiście zawiera element $x$ czyli, z definicji nerwu, sympleks $\Delta (p_{i_0}, \ldots, p_{i_l})$ należy do $\mathcal{N(U)}$. Z własności funkcji $\kappa$ ($\sum _{i=1}^k\kappa_i(x)=1$, $\kappa_i(x)\ge 0) $ możemy pokazać, że $\kappa(x)\in \Delta(p_{i_0}, \ldots, p_{i_l})$, skąd oczywiście $\kappa(x)\in \mathcal{N(U)}$\\
+
+    By pokazać gwiazdę 
+    % todo
+\end{proof}
+
+\section{Twierdzenie o $\varepsilon$-przekształceniach}
+Możemy w takim razie przejść do dowodu finalnego twierdzenia.
+\begin{proof}
+    Twierdzenia \ref{twie:o_map}\\ 
+    $(\Rightarrow)$\\
+    Dla przestrzeni $X$ o wymiarze $\dim X = -1$ czyli przestrzeni pustej dowód oczywisty. Weźmy w takim razie taką przestrzeń $X$ spełniającą $0\le \dim X\le n$ oraz niech $\mathcal{U}$ będzie dowolnym skończonym otwartym pokryciem $X$. Teraz, skoro $\dim X\le n$, to możemy znaleźć otwarte wpisanie $\mathcal{V}=\{V_i\}_{i=1}^k$ pokrycia $\mathcal{U}$, spełniające $\ord \mathcal{V}\le n$. Weźmy w takim razie nerw tego pokrycia $\mathcal{N(V)}$, który oczywiście spełnia $\dim \mathcal{N(V)\le n}$, o wierzchołkach $p_1, \ldots, p_k$.\\
+    Zauważmy, że $\kappa$-przekształcenie pokreślone przez pokrycie $\mathcal{V}$ oraz punkty $p_1, \ldots, p_k$ jest szukaną $\mathcal{U}-$mapą ponieważ: 
+    $\{St_{\mathcal{N(V)}}(p_i)\}_{i=1}^k$ jest otwartym pokryciem $\mathcal{N(V)}$, a z twierdzenia \ref{twie:1_10_7} wiemy, że 
+    \[\kappa ^{-1}(\{St_{\mathcal{N(U)}}(p_i)\}_{i=1}^k)=\mathcal{V}\]
+    $(\Leftarrow)$\\
+    ta implikacja została udowodniona wcześniej w lekko zmodyfikowanym twierdzeniu \ref{twie:1_10_11}.
+\end{proof}
+
+\begin{proof} 
+    Twierdzenia \ref{twie:o_prz}\\
+    $(\Leftarrow)$\\
+    Podobnie jak w poprzednim twierdzeniu, tą część udowodniliśmy już wcześniej w \ref{twie:1_10_12}. Pozostaje w takim razie druga implikacja.\\
+    $(\Rightarrow)$\\
+    Mamy zwartą przestrzeń metryczną $X$ o wymiarze pokryciowym $\dim X\le n$ oraz ustalmy liczbę $\varepsilon>0$. Weźmy pokrycie $\mathcal{U}$ będące skończonym wpisaniem pokrycia $\{ \mathcal{B(x, \frac{\varepsilon}{2})} \}_{x\in X}$. Z twierdzenia \ref{twie:o_map} wiemy, że możemy znaleźć $\mathcal{U}$-mapę $f:X\rightarrow Y$  przestrzeni $X$ w wielościan wymiaru conajwyżej $n$. Pozostaje w takim razie pokazać, że jest to również $\varepsilon-$mapa. \\
+    Wiemy, że możemy znaleźć otwarte pokrycie $\mathcal{V}$ $Y$, dla którego $f^{-1}(\mathcal{V})$ jest wpisaniem $\mathcal{U}$, a z tego oczywiście dostajemy 
+    \[\forall_i \; \delta (f^{-1}(V_i))< \varepsilon\]
+    oraz
+    \[\forall y\in Y\;\; \delta (f^{-1}(y))< \varepsilon\]
+    co kończy dowód.    
+\end{proof}
+
+\section{odwrócone ciągi wielościanów}
+Jednym z ważnych wniosków z twierdzenia \ref{twie:o_prz}, jest że klasa metrycznych ośrodkowych przestrzeni o wymiarze pokryciowym co najwyżej $n$, pokrywa się z klasą przestrzeni homeomorficznych do granicy odwróconych ciągów wielościanów o wymiarze co najwyżej $n$. 
+\begin{defi}
+    Układem odwrotnym, $S = \{X_i, \pi_j^i, N\}$, gdzie $N$ jest zbiorem wszystkich dodatnich liczb dodatnich nazwiemy \emph{odwróconym ciągiem}, często oznaczanym po prostu jako $\{X_i, \pi_j^i\}$. \cite{engelking1989}
+\end{defi}
+\begin{twie}
+    Zwarta przestrzeń metryczna $X$ spełnia nierówność $\dim X\le n$ wtedy i tylko wtedy, gdy jest homeomorficzna do granicy odwróconego ciągu wielościanów o wymiarze $\le n$.
+\end{twie}
