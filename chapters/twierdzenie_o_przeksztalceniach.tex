@@ -134,8 +134,16 @@ Udowodnikmy teraz dwa twierdzenia, pierwsze mówi o przybliżaniu ciągłych prz
 \begin{proof}
     Weźmy $x\in X$ oraz niech $U_{i_0}, \ldots, U_{i_l}$ będą elementami pokrycia zawierającymi $x$. Wiemy, że $U_{i_0}\cap  \ldots\cap U_{i_l} \ne \emptyset$ bo oczywiście zawiera element $x$ czyli, z definicji nerwu, sympleks $\Delta (p_{i_0}, \ldots, p_{i_l})$ należy do $\mathcal{N(U)}$. Z własności funkcji $\kappa$ ($\sum _{i=1}^k\kappa_i(x)=1$, $\kappa_i(x)\ge 0) $ możemy pokazać, że $\kappa(x)\in \Delta(p_{i_0}, \ldots, p_{i_l})$, skąd oczywiście $\kappa(x)\in \mathcal{N(U)}$\\
 
-    By pokazać gwiazdę 
-    % todo
+    Teraz pokażemy drugą równość. Wiemy, że przedstawienie punktów w kompleksie w postaci $\sum_{i=1}^k \lambda_i p_i$ jest jednoznaczne, dostajemy równość
+    \[
+    \lambda_i (\kappa(x))=\kappa_i(x)
+    \]
+    a stąd dla każdego $i=1,2,\ldots,k$ zachodzi
+    \[ \kappa^{-1}(\St _{\mathcal{N(U)}}(p_i))= \]
+    \[ \{x\in X \;:\; \kappa(x)\in \St _{\mathcal(N(U))(p_i)}\}= \]
+    \[\{x\in X \;:\; \lambda_i(\kappa(x))>0\}=\]
+    \[\{ x\in X \;:\; \kappa_i(x)>0 \} = U_i\]
+    co kończy dowód.
 \end{proof}
 
 \section{Twierdzenie o $\varepsilon$-przekształceniach}
