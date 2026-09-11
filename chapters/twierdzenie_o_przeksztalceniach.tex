@@ -147,16 +147,16 @@ Udowodnikmy teraz dwa twierdzenia, pierwsze mówi o przybliżaniu ciągłych prz
 
 \section{Twierdzenie o $\varepsilon$-przekształceniach}
 Możemy w takim razie przejść do dowodu finalnego twierdzenia.
-% todo chyba poprawić składnie?
 \begin{proof}
     Twierdzenia \ref{twie:o_map}\\ 
     $(\Rightarrow)$\\
-    Dla przestrzeni $X$ o wymiarze $\dim X = -1$ czyli przestrzeni pustej dowód oczywisty. Weźmy w takim razie taką przestrzeń $X$ spełniającą $0\le \dim X\le n$ oraz niech $\mathcal{U}$ będzie dowolnym skończonym otwartym pokryciem $X$. Teraz, skoro $\dim X\le n$, to możemy znaleźć otwarte wpisanie $\mathcal{V}=\{V_i\}_{i=1}^k$ pokrycia $\mathcal{U}$, spełniające $\ord \mathcal{V}\le n$. Weźmy w takim razie nerw tego pokrycia $\mathcal{N(V)}$, który oczywiście spełnia $\dim \mathcal{N(V)}\le n$, o wierzchołkach $p_1, \ldots, p_k$.\\
-    Zauważmy, że $\kappa$-przekształcenie pokreślone przez pokrycie $\mathcal{V}$ oraz punkty $p_1, \ldots, p_k$ jest szukaną $\mathcal{U}-$mapą ponieważ: 
+    Dla przestrzeni $X$ o wymiarze $\dim X = -1$, czyli przestrzeni pustej, dowód oczywisty. Niech w takim razie przestrzeń $X$ spełnia $0\le \dim X\le n$ oraz niech $\mathcal{U}$ będzie dowolnym skończonym otwartym pokryciem $X$. Teraz, skoro $\dim X\le n$, to możemy znaleźć otwarte wpisanie $\mathcal{V}=\{V_i\}_{i=1}^k$ pokrycia $\mathcal{U}$, spełniające $\ord \mathcal{V}\le n$. Weźmy w takim razie nerw tego pokrycia $\mathcal{N(V)}$, który oczywiście spełnia $\dim \mathcal{N(V)}\le n$, o wierzchołkach $p_1, \ldots, p_k$.\\
+    Zauważmy, że $\kappa$-przekształcenie pokreślone przez pokrycie $\mathcal{V}$ oraz punkty $p_1, \ldots, p_k$ jest szukaną $\mathcal{U}-$mapą ponieważ 
     $\{St_{\mathcal{N(V)}}(p_i)\}_{i=1}^k$ jest otwartym pokryciem $\mathcal{N(V)}$, a z twierdzenia \ref{twie:1_10_7} wiemy, że 
-    \[\kappa ^{-1}(\{St_{\mathcal{N(U)}}(p_i)\}_{i=1}^k)=\mathcal{V}\]
+    \[\kappa ^{-1}(\{St_{\mathcal{N(U)}}(p_i)\}_{i=1}^k)=\mathcal{V},\]
+    co kończy nam tę część dowodu. Pozostaje pokazać implikację w drugą stronę.\\
     $(\Leftarrow)$\\
-    ta implikacja została udowodniona wcześniej w lekko zmodyfikowanym twierdzeniu \ref{twie:1_10_11}.
+    Ta implikacja została udowodniona wcześniej w lekko zmodyfikowanym twierdzeniu \ref{twie:1_10_11}.
 \end{proof}
 
 \begin{proof} 
@@ -164,11 +164,11 @@ Możemy w takim razie przejść do dowodu finalnego twierdzenia.
     $(\Leftarrow)$\\
     Podobnie jak w poprzednim twierdzeniu, tą część udowodniliśmy już wcześniej w \ref{twie:1_10_12}. Pozostaje w takim razie druga implikacja.\\
     $(\Rightarrow)$\\
-    Mamy zwartą przestrzeń metryczną $X$ o wymiarze pokryciowym $\dim X\le n$ oraz ustalmy liczbę $\varepsilon>0$. Weźmy pokrycie $\mathcal{U}$ będące skończonym wpisaniem pokrycia $\{ \mathcal{B(x, \frac{\varepsilon}{2})} \}_{x\in X}$. Z twierdzenia \ref{twie:o_map} wiemy, że możemy znaleźć $\mathcal{U}$-mapę $f:X\rightarrow Y$  przestrzeni $X$ w wielościan wymiaru conajwyżej $n$. Pozostaje w takim razie pokazać, że jest to również $\varepsilon-$mapa. \\
-    Wiemy, że możemy znaleźć otwarte pokrycie $\mathcal{V}$ $Y$, dla którego $f^{-1}(\mathcal{V})$ jest wpisaniem $\mathcal{U}$, a z tego oczywiście dostajemy 
-    \[\forall_i \; \delta (f^{-1}(V_i))< \varepsilon\]
-    oraz
-    \[\forall y\in Y\;\; \delta (f^{-1}(y))< \varepsilon\]
+    Mamy zwartą przestrzeń metryczną $X$ o wymiarze pokryciowym $\dim X\le n$ oraz ustalmy liczbę $\varepsilon>0$. Weźmy pokrycie $\mathcal{U}$ będące skończonym wpisaniem pokrycia $\{ \mathcal{B}(x, \frac{\varepsilon}{2}) \}_{x\in X}$. Z twierdzenia \ref{twie:o_map} wiemy, że możemy znaleźć $\mathcal{U}$-mapę $f:X\rightarrow Y$  przestrzeni $X$ w wielościan wymiaru co najwyżej $n$. Pozostaje w takim razie pokazać, że jest to również $\varepsilon-$mapa. \\
+    Wiemy, że możemy znaleźć otwarte pokrycie $\mathcal{V}$ przestrzeni $Y$, dla którego $f^{-1}(\mathcal{V})$ jest wpisaniem $\mathcal{U}$, a z tego oczywiście dostajemy że dla każdego elementu pokrycia $V\in \mathcal{V}$ 
+    \[\delta (f^{-1}(V))< \varepsilon\]
+    oraz dla każdego elementu $y \in Y$
+    \[\delta (f^{-1}(y))< \varepsilon\]
     co kończy dowód.    
 \end{proof}
 
