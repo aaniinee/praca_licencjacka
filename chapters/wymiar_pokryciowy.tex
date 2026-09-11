@@ -54,28 +54,27 @@ Teraz możemy przejść do wprowadzenia naszej definicji.
 \end{defi}
 \emph{ČL} pochodzi tutaj od nazwisk Čech i Lebesque, którzy, jak wspomniane było wcześniej, jako pierwsi wprowadzili definicję wymiaru pokryciowego.\\
 Łatwo możemy zauważyć, że jeżeli przestrzenie $X$ i $Y$ są homeomorficzne, to oczywiście spełniają $\dim X = \dim Y$, kożystamy tutaj z własności zamknięcia homeomorfizmu na zbiory otwarte, jak również że dla wszystkich przestrzeni euklidesowych 
-$\dim \mathbb{R}^n=n$, która została udowodniona w
-% todo to nie jest łatwe, dodać cytat
+$\dim \mathbb{R}^n=n$, która została udowodniona w \cite{bro1913} (pokazane zostało $\dim I^n=n$)
 \begin{przy}
-    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy pokrycie postaci 
+    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy jak na rusunku \ref{fig:wymiar_1}, które jest oczywiście krotności 1. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{pictures/wymiar_1.png}
-        % \caption{wymiar}
+        \caption{Pokrycie odcinka krotności 1}
         \label{fig:wymiar_1}
     \end{figure}
-    które jest oczywiście krotności 1. 
 \end{przy}
 \begin{przy}
-    Ewentualnie dodać przykład dla $R^2$
-    % tak zrobić to todo
+    Zauważmy, że dla każdego pokrycia $\mathcal{U}$ kwadratu będącego podzbiorem $\mathbb{R}^2$, możemy znaleźć pokrycie skonstruowane jak na rysunku \ref{fig:kwadrat}, tak że dla odpowiednio małych elementów będzie ono wpisane w pokrycie $\mathcal{U}$. Oczywiście to pokrycie jest krotności 2
+
      \begin{figure}[H]
         \centering
+        \input{pictures/wpisanie_kwadratu.tex}
         % \includesvg[width=0.2\textwidth]{pictures/Refinement_on_a_planar_shape.svg}
-        % \caption{zwężenie pokrycia kwadratu}
-        \label{fig:wymiar_2}
+        \caption{Pokrycie kwadratu krotności 2}
+        \label{fig:kwadrat}
     \end{figure}
-    \end{przy}
+\end{przy}
 \section{Twierdzenia}
 Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisań możemy szukać zwężeń, drugie pokazuje, że nie musimy pokazywać instnienia zwężeń dla pokryć o dowolnie dużej liczbie elementów, tylko rozważać jedynie te o ograniczonej.
 \begin{twie} % 1.6.8
@@ -160,10 +159,9 @@ Przejdziemy teraz do kolejnej definicji.
 \end{defi}
 Skrót \emph{BČ} pochodzi tutaj od nazwisk Brouver i Čech \cite{bro1913}, \cite{cech1993}. 
 Łatwo możemy pokazać, że podobnie jak dla poprzedniej definicji, dla homeomorficznych przestrzeni normalnych $X\cong Y$ zachodzi $\Ind X=\ind Y$. Oczywiście też dla każdej przestrzeni normalnej $X$ spełniona jest nierówność $\ind X\le \Ind X$, 
-% to chyba nie ma sensu todo
-jako że wymiary pokrywają się na dziedzinie przestrzeni metrycznych ośrodkowych. 
+jako iż warunek (BČ2) w definicji $\Ind$ implikuje warunek (MU2) w $\ind$.
 
-Ważne twierdzenie, wiążące te wymiary ze sobą to:
+Ważne twierdzenie, wiążące te trzy wymiary ze sobą to:
 \begin{twie}
     Dla każdej przestrzeni metrycznej ośrodkowej $X$ spełnione są równości
     \[\dim X = \ind X = \Ind X\]
