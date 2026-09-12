@@ -21,18 +21,16 @@
     by $r_1, r_2, \ldots , r_l, p_1, p_2, \ldots , p_k$ również tworzyły układ w położeniu ogólnym.
 \end{twie}
 \begin{proof}
-    Wynika wprost z indukcji:\\
-    % todo co dla l=0 ?? poprawić ten krok indunkcyjny
-    $p_1$ zdefiniujemy po prostu jako $q_1$, teraz pokażemy krok indukcjyjny.
-    Załóżmy że punkty $p_1, \ldots, p_{j-1}$ są dobrze zdefiniowane, czyli tworzą układ w położeniu ogólnym oraz spełniają $\rho(p_i, q_i)<\alpha$ dla $i=1, \ldots, j-1$.\\
+    Zaczniemy od pokazania dowodu dla $l=0$, czyli bez brania pod uwagę punktów $r_j$. \\
+    Zacznijmy od zdefiniowania punktu $p_1:=q_1$. Każdy kolejny punkt będziemy konstuować korzystać z poprzedno ustalonych. Załóżmy więc, że punkty $p_1, \ldots, p_{j-1}$ są dobrze zdefiniowane, czyli tworzą układ w położeniu ogólnym oraz spełniają $\rho(p_i, q_i)<\alpha$ dla $i=1, \ldots, j-1$.\\
     Zauważmy teraz, że każdy co najwyżej $m-1$ elementowy podzbiór punktów $p_1, \ldots, p_{j-1}$ jest afinicznie niezależny, oraz że będą one rozpinały przestrzeń afiniczną wymiaru co najwyżej $m-1$. Czyli jest to zbiór nigdzie gęsty w $\mathbb{R}^m$. Ponieważ wszystkich takich podzbiorów jest skończenie wiele, to suma przestrzeni afinicznych rozpiętych na nich również będzie nigdzie gęsta. Wynika z tego, jesteśmy w stanie znaleźć taki punkt $p_j$ poza tym zbiorem, który będzie spełniał $\rho (p_j, q_j)<\alpha$.\\
     \\
-    Dowód dla drugiej części twierdzenia jest analogiczny. 
+    Zauważmy teraz, że dowód dla $l>0$ przebiega analogicznie, każdy punkt $p_j$, $j=1, \ldots, k$ dobieramy tak by tworzył z punktami $r_1, \ldots, r_l, p_1, \ldots p_{j-1}$ układ w położnieniu ogólnym. 
     \begin{figure}[H]
         \centering
         \input{pictures/konstrukcja.tex}
         % \includegraphics[width=0.8\textwidth]{pictures/polo_tw_konstrukcja.png}
-        \caption{Szkic konstrukcji}
+        \caption{Szkic konstrukcji.}
         \label{fig:szkic}
     \end{figure}
 \end{proof}

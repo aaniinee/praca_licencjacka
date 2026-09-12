@@ -83,12 +83,16 @@ Korzystając z tak wprowadzonych współczynników, zdefiniujemy tak zwane \emph
         \label{fig:gwiazda}
     \end{figure}
 \end{defi}
-Łatwo możemy pokazać, że 
-% todo nie łatwo xd trzeba rozpisać :<<<<<<
-$
-\St_{\mathcal{K}}(p_i) = 
-     \{ p\in |\mathcal{K}|\;:\;\lambda_i>0\}
-$,
+Zauważmy, że jeżeli $p_i\not \in \in S$, to każdego punktu $p\in S$ spełnione będzie $\lambda_i(p) = 0$. A za tym idzie 
+\[
+    \bigcup\{ S\in \mathcal{K}\;|\;p_i\not \in S\} = 
+    \{ p\in K \;|\; \lambda_i(p)=0\}.
+\]
+Więc oczywiście
+\[
+\St_{\mathcal{K}}(p_i) =
+     \{ p\in |\mathcal{K}|\;:\;\lambda_i>0\},
+\]
 z czego wynika, że gwiazdy są otwartymi podzbiorami wielościanu $|\mathcal{K}|$
 
 Mimo, że technicznie kompleksy symplicjalne i wielościany są innymi obiektami, w dalszej części pracy będziemy je utożsamiać ze sobą, w części której nam jest to potrzebne używać własności kompleksu symplicjalnego, w innej odpowiadającemu mu wielościanu.
