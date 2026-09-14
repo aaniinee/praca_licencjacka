@@ -177,9 +177,38 @@ Jednym z ważnych wniosków z twierdzenia \ref{twie:o_prz}, jest że klasa metry
 \begin{defi}
     Układem odwrotnym, $S = \{X_i, \pi_j^i, N\}$, gdzie $N$ jest zbiorem wszystkich dodatnich liczb dodatnich nazwiemy \emph{odwróconym ciągiem}, często oznaczanym po prostu jako $\{X_i, \pi_j^i\}$. \cite{engelking1989}
 \end{defi}
+Tutaj $X_i$ są przestrzeniami topologicznymi, a funkcje $\pi _j^i:X_i \rightarrow X_j$ to ciągłe przekształcenia spełniające $\pi _j^i \pi_i^k = \pi _j^k$, oraz $\pi _i^i=\id_{X_i}$.
 \begin{twie}
     Zwarta przestrzeń metryczna $X$ spełnia nierówność $\dim X\le n$ wtedy i tylko wtedy, gdy jest homeomorficzna do granicy odwróconego ciągu wielościanów o wymiarze $\le n$.
 \end{twie}
+\begin{proof}
+    Możemy znaleźć w rozdziale 1.13 w \cite{engelking1995}.
+\end{proof}
 
-% todo dodać przykład np odwrócony zbiór cantora???
-% idk idk
+Pokażemy teraz kilka przykładów pokazujących użycie tego twierdzenia
+
+\begin{przy}
+    Pokażemy, że wymiar okręgu jednostkowego równy jest $1$, poprzez homeomorfizm z granicą ciągu wielokątów. $X_i$ to będą obwody $2^i$-kątów foremnych o wspólnych wierzchołkach znajdujących się na tym samym okręgu, a funkcie $\pi_j^j$ - rzut radialny. Wtedy oczywiście dla każdego $i$ spełnione jest $\dim X_i = 1$, więc okrąg, który jest homeomorficzny z granicą tego odwróconego ciągu, również ma wymiar 1.
+    \begin{figure}[H]
+        \centering
+        \input{pictures/okrag.tex}
+        \caption{Rysunek obrazujący.}
+        \label{fig:okrag}
+    \end{figure}
+    
+\end{przy}
+
+\begin{przy}
+    Pokażemy, że zbiór \emph{Cantora} jest wymiaru 0. \\
+    $X_i$ to będą indeksowane od 0 zbiory dyskretne $2^i$, a funcje $\pi _i^{i+1}$ będą określone przez równania $\pi _i^{i+1}(x_{i+1, 2j})= x_{i, j}$, $\pi _i^{i+1}(x_{i+1, 2j+1})= x_{i, j}$. Zauważmy, że dla takiego systemu, możemy znaleźć intuicyjny homeomorfizm między jego granicą a zbiorem cantora w reprezentacji kożystającej z systemu trójkowego.
+    \begin{figure}[H]
+        \centering
+        \input{pictures/cantor.tex}
+        \caption{Funkcje $\pi ^{i+1}_i $ oraz system trójkowy.}
+        \label{fig:cantor}
+    \end{figure}
+\end{przy}
+
+\begin{przy}
+    W podobny sposób możemy pokazać że wymiar pokryciowy \emph{dywanu sierpińskiego} jest równy 1.
+\end{przy}

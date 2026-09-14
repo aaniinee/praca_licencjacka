@@ -1,0 +1,113 @@
+\begin{tikzpicture}[scale=1.0, every node/.style={text=blue}]
+
+\def\ysep{0.6}
+\def\rad{1.2pt}
+\def\labelshift{2pt}
+
+\newcommand{\bitlabel}[1]{%
+  \ifodd#1
+    0%
+  \else
+    2%
+  \fi
+}
+
+% ---------- definicje współrzędnych ----------
+\coordinate (P0-1) at (4.5, 0);
+
+\coordinate (P1-1) at (1.5, -\ysep);
+\coordinate (P1-2) at (7.5, -\ysep);
+
+\coordinate (P2-1) at (0.5, -2*\ysep);
+\coordinate (P2-2) at (2.5, -2*\ysep);
+\coordinate (P2-3) at (6.5, -2*\ysep);
+\coordinate (P2-4) at (8.5, -2*\ysep);
+
+\coordinate (P3-1) at (0.1667, -3*\ysep);
+\coordinate (P3-2) at (0.8333, -3*\ysep);
+\coordinate (P3-3) at (2.1667, -3*\ysep);
+\coordinate (P3-4) at (2.8333, -3*\ysep);
+\coordinate (P3-5) at (6.1667, -3*\ysep);
+\coordinate (P3-6) at (6.8333, -3*\ysep);
+\coordinate (P3-7) at (8.1667, -3*\ysep);
+\coordinate (P3-8) at (8.8333, -3*\ysep);
+
+\coordinate (P4-1)  at (0.0556, -4*\ysep);
+\coordinate (P4-2)  at (0.2778, -4*\ysep);
+\coordinate (P4-3)  at (0.7222, -4*\ysep);
+\coordinate (P4-4)  at (0.9444, -4*\ysep);
+\coordinate (P4-5)  at (2.0556, -4*\ysep);
+\coordinate (P4-6)  at (2.2778, -4*\ysep);
+\coordinate (P4-7)  at (2.7222, -4*\ysep);
+\coordinate (P4-8)  at (2.9444, -4*\ysep);
+\coordinate (P4-9)  at (6.0556, -4*\ysep);
+\coordinate (P4-10) at (6.2778, -4*\ysep);
+\coordinate (P4-11) at (6.7222, -4*\ysep);
+\coordinate (P4-12) at (6.9444, -4*\ysep);
+\coordinate (P4-13) at (8.0556, -4*\ysep);
+\coordinate (P4-14) at (8.2778, -4*\ysep);
+\coordinate (P4-15) at (8.7222, -4*\ysep);
+\coordinate (P4-16) at (8.9444, -4*\ysep);
+
+% ---------- strzałki dziecko -> rodzic, jasne, przerywane ----------
+\tikzset{
+  arrowstyle/.style={
+    ->,
+    draw=gray!40,
+    dashed,
+    shorten >=1pt,
+    shorten <=1pt,
+    thin
+  }
+}
+
+% Krok 1 -> Krok 0
+\draw[arrowstyle] (P1-1) -- (P0-1);
+\draw[arrowstyle] (P1-2) -- (P0-1);
+
+% Krok 2 -> Krok 1
+\foreach \c in {1,2} {
+  \draw[arrowstyle] (P2-\c) -- (P1-1);
+  \draw[arrowstyle] (P2-\the\numexpr\c+2\relax) -- (P1-2);
+}
+
+% Krok 3 -> Krok 2
+\foreach \c in {1,2,3,4} {
+  \draw[arrowstyle] (P3-\the\numexpr2*\c-1\relax) -- (P2-\c);
+  \draw[arrowstyle] (P3-\the\numexpr2*\c\relax) -- (P2-\c);
+}
+
+% Krok 4 -> Krok 3
+\foreach \c in {1,...,8} {
+  \draw[arrowstyle] (P4-\the\numexpr2*\c-1\relax) -- (P3-\c);
+  \draw[arrowstyle] (P4-\the\numexpr2*\c\relax) -- (P3-\c);
+}
+
+% ---------- punkty i etykiety ----------
+\foreach \x [count=\i from 1] in {4.5} {
+  \fill (\x, 0) circle (\rad);
+  \node[right=\labelshift] at (\x, 0) {\scriptsize \bitlabel{\i}};
+}
+\foreach \x [count=\i from 1] in {1.5, 7.5} {
+  \fill (\x, -\ysep) circle (\rad);
+  \node[right=\labelshift] at (\x, -\ysep) {\scriptsize \bitlabel{\i}};
+}
+\foreach \x [count=\i from 1] in {0.5, 2.5, 6.5, 8.5} {
+  \fill (\x, -2*\ysep) circle (\rad);
+  \node[right=\labelshift] at (\x, -2*\ysep) {\scriptsize \bitlabel{\i}};
+}
+\foreach \x [count=\i from 1] in {0.1667, 0.8333, 2.1667, 2.8333, 6.1667, 6.8333, 8.1667, 8.8333} {
+  \fill (\x, -3*\ysep) circle (\rad);
+  \node[right=\labelshift] at (\x, -3*\ysep) {\scriptsize \bitlabel{\i}};
+}
+\foreach \x [count=\i from 1] in {
+  0.0556, 0.2778, 0.7222, 0.9444,
+  2.0556, 2.2778, 2.7222, 2.9444,
+  6.0556, 6.2778, 6.7222, 6.9444,
+  8.0556, 8.2778, 8.7222, 8.9444
+} {
+  \fill (\x, -4*\ysep) circle (\rad);
+  \node[below=1pt] at (\x, -4*\ysep) {\scriptsize \bitlabel{\i}};
+}
+
+\end{tikzpicture}
