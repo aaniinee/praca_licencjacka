@@ -48,7 +48,7 @@ Teraz możemy przejść do wprowadzenia naszej definicji.
     \emph{Wymiarem pokryciowym} przestrzeni normalnej $X$ (ozn. $\dim X)$ nazwiemy liczbę całkowitą $\geq -1$ lub $\infty$ spełniającą następujące własności:
     \begin{itemize}
         \item[(ČL1)] $\dim X\leq n$ dla $n=-1,0,1,\cdots$, jeśli dla każdego skończonego otwartego pokrycia przestrzeni $X$ istnieje skończone wpisanie krotności $\leq n$,
-        \item[(ČL2)] $\dim X=n$ jeżeli spełnione są nierówności $\dim X\leq n$ oraz $\dim X\not\leq n-1$,
+        \item[(ČL2)] $\dim X=n$ jeżeli spełnione są nierówności $\dim X\leq n$ oraz $\dim X> n-1$,
         \item[(ČL3)] $\dim X=\infty$, jeżeli dla każdego $n=-1,0,1,\ldots$ zachodzi $\dim X >n$
     \end{itemize} 
 \end{defi}
@@ -98,7 +98,7 @@ Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisa
     Przestrzeń normalna $X$ ma wymiar pokryciowy $\dim X \leq n $ wtedy i tylko wtedy, gdy dla każdego $n+2$ elementowego otwartego pokrycia przestrzeni $X$, $\{U_i\} _{i=1}^{n+2}$, istnieje otwarte zwężenie $ \{W_i\} _{i=1}^{n+2}$ o krotności $\ord W\le n$, spełniające $\bigcap_{i=1}^{n+2} W_i = \emptyset$.
 \end{twie}
 \begin{proof}
-    Zauważmy, że do dowodu tego twierdzenia wystarczy pokazać, że jeżeli przestrzeń normalna $X$ ma wymiar pokryciowy większy od $n$, to jesteśmy w stanie znaleźć $\mathcal{U}=\{U_i\}_{i=1}^{n+2}$ - takie otwarte pokrycie $n+2$-elementowe, że każde jego otwarte zwężenie $\mathcal{W}=\{W_i\}_{i=1}^{n+2}$ spełnia $\bigcap\mathcal{W}\ne \emptyset$\\
+    Zauważmy, że do dowodu tego twierdzenia wystarczy pokazać, że jeżeli przestrzeń normalna $X$ ma wymiar pokryciowy większy od $n$, to jesteśmy w stanie znaleźć $\mathcal{U}=\{U_i\}_{i=1}^{n+2}$ - takie otwarte pokrycie $n+2$-elementowe, że każde jego otwarte zwężenie $\mathcal{W}=\{W_i\}_{i=1}^{n+2}$ spełnia $\bigcap\mathcal{W}\ne \emptyset$.\\
     Teraz mamy $\dim X>n$, więc wiemy że możemy znaleźć takie otwarte pokrycie $\mathcal{V}=\{V_i\}_{i=1}^{k}$ przestrzeni $X$, dla którego nie istnieje otwarte zwężenie krotności $\le n$. \\
     Do tego, możemy założyć, że jeżeli $\mathcal{V}' = \{V_i'\}_{i=1}^k$ to otwarte zwężenie pokrycia $\mathcal{V}$, to spełnia ono: 
     \[V_{i_1}\cap V_{i_2} \cap \cdots \cap V_{i_m} \ne \emptyset\;\;\;\Rightarrow\;\;\;
@@ -118,9 +118,12 @@ Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisa
 \end{proof}
 
 \begin{wnio}
-    Do pokazania, że przestrzeń $X$ ma wymiar pokryciowy mniejszy równy $n$, wystarczy sprawdzać otwarte pokrycia $n+2$ elementowe.
-    % prosze to rozpisać
+    Do pokazania, że przestrzeń $X$ ma wymiar pokryciowy mniejszy równy $n$, wystarczy rozważać otwarte pokrycia $n+2$ elementowe.
 \end{wnio}
+% \begin{proof}
+%     Jeżeli $\dim X\le n$, 
+% \end{proof}
+% todo nie jestem pewna co?
 
 \section{Mały i duży wymiar indukcyjny}
 Tak jak wspomniane było we wstępie, poza wymiarem pokryciowym często mówimy również o dwóch inaczej zdefiniowanych wymiarach, są one jednak ze sobą powiązane.
@@ -141,11 +144,12 @@ Udowodnione też zostało twierdzenie o podzbiorze:
 \begin{twie}
     Dla każdego podzbioru $M$ przestrzeni regularnej $X$ spełnione jest 
     \[\ind M\le \ind X.\]
-    % to jest dla ind, rozpisać jak jest dla dim.
 \end{twie}
 \begin{proof}
     odsyłam do dowodu twierdzenia 1.1.2 w \cite{engelking1995}.
 \end{proof}
+Łatwo możemy zauważyć że podobna własność spełniona będzie dla wymiaru pokryciowego, czyli że dla każdej podrzestrzeni z topologią dziedziczoną $M$ przestrzeni $X$ spełnione będzie $\dim M\le \dim X$.
+
 Przejdziemy teraz do kolejnej definicji.
 \begin{defi}
     \emph{Dużym wymiarem indukcyjnym} przestrzeni normalnej $X$, (oznaczamy $\Ind X$) nazwiemy liczbę całkowitą co najmniej $-1$ bądź $\infty$ spełniającą:

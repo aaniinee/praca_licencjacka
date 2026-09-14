@@ -44,8 +44,6 @@
     \emph{Nerwem} pokrycia $\mathcal{U}$ nazwiemy dowolny kompleks symplicjalny $\mathcal{N(U)}$, 
     którego wierzchołki możemy ustawić w ciąg $p_1, p_2, \ldots, p_k$ w taki sposób, że
     \[p_{i_0}p_{i_1} \ldots p_{i_m}\in \mathcal{N(U)} \Leftrightarrow U_{i_0}\cap U_{i_1}\cap \cdots \cap U_{i_m}\neq \emptyset \]
-\end{defi}
-\begin{przy}
     \begin{figure}[H]
         \centering
         % \includegraphics[width=0.8\textwidth]{pictures/nerw_2.png}
@@ -53,8 +51,8 @@
         \caption{Nerw}
         \label{fig:nerw_2}
     \end{figure}
-    % todo dodać jakiś opis a może nie? zostawimy jak jest
-\end{przy}
+\end{defi}
+
 \section{Twierdzenie o zanużeniu w $R^{2n+1}$}
 
 \begin{twie}
@@ -73,8 +71,13 @@
     Z twierdzenia \ref{twie:1_10_2} wiemy, że możemy tak wybrać punkty $p_1, \ldots, p_k\in \mathbb{R}^{2n+1}$ by punkty $r_1, \ldots, r_{n+1}, p_1,\ldots, p_k $ były w położeniu ogólnym. \\
     Z tego, że $\ord \mathcal{U}\le n$ wiemy, że dla każdego ciągu $l+1$ indeksów $0\le i_0< \cdots < i_l\le k$ takich że $U_{i_0}\cap\cdots \cap U_{i_l}\ne \emptyset$, to $l\le n<2n+1$, czyli punkty odpowiadające tym indeksom: $p_{i_0},\ldots p_{i_l}$ tworzą układ afinicznie niezależny oraz że sympleks na nich zbudowany jest dobrze zdefiniowany. \\
     Teraz niech $\mathcal{K}$ będzie rodziną sympleksów 
-    zdefiniowanych w ten sposób.
-    % to rozpisać wprost
+    zdefiniowanych w ten sposób, czyli 
+    \[
+    \mathcal{K} = 
+    \{
+        \Delta (p_{i_0},\ldots p_{i_l})\;\; | \;\; U_{i_0}\cap\cdots \cap U_{i_l}\ne \emptyset
+    \}
+    \]
     Teraz pozostaje pokazć, że tak zdefiniowana rodzina jest nerwem $\mathcal{N(U)}$ oraz że $\mathcal{N(U)}\cap H=\emptyset$.\\
     Zauważmy, że do pokazania że $\mathcal{K}$ jest nerwem, jedyne co trzeba pokazać to że $\mathcal{K}$ jest kompleksem symplicjalnym, czyli że 
     \begin{enumerate}
