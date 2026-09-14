@@ -11,7 +11,7 @@
         \caption{Układ w położeniu ogólnym.}
         \label{fig:polozenie_ogolne}
     \end{figure}
-    Na rysunku \ref{fig:polozenie_ogolne} punkty $p_1, \ldots, p_7$ twożą oczywiście taki układ.
+    Na rysunku \ref{fig:polozenie_ogolne} punkty $p_1, \ldots, p_7$ tworzą oczywiście taki układ.
 \end{przy}
 
 \begin{twie}
@@ -22,10 +22,10 @@
 \end{twie}
 \begin{proof}
     Zaczniemy od pokazania dowodu dla $l=0$, czyli bez brania pod uwagę punktów $r_j$. \\
-    Zacznijmy od zdefiniowania punktu $p_1:=q_1$. Każdy kolejny punkt będziemy konstuować korzystać z poprzedno ustalonych. Załóżmy więc, że punkty $p_1, \ldots, p_{j-1}$ są dobrze zdefiniowane, czyli tworzą układ w położeniu ogólnym oraz spełniają $\rho(p_i, q_i)<\alpha$ dla $i=1, \ldots, j-1$.\\
-    Zauważmy teraz, że każdy co najwyżej $m-1$ elementowy podzbiór punktów $p_1, \ldots, p_{j-1}$ jest afinicznie niezależny, oraz że będą one rozpinały przestrzeń afiniczną wymiaru co najwyżej $m-1$. Czyli jest to zbiór nigdzie gęsty w $\mathbb{R}^m$. Ponieważ wszystkich takich podzbiorów jest skończenie wiele, to suma przestrzeni afinicznych rozpiętych na nich również będzie nigdzie gęsta. Wynika z tego, jesteśmy w stanie znaleźć taki punkt $p_j$ poza tym zbiorem, który będzie spełniał $\rho (p_j, q_j)<\alpha$.\\
+    Zacznijmy od zdefiniowania punktu $p_1:=q_1$. Każdy kolejny punkt będziemy konstruować korzystać z poprzednio ustalonych. Załóżmy więc, że punkty $p_1, \ldots, p_{j-1}$ są dobrze zdefiniowane, czyli tworzą układ w położeniu ogólnym oraz spełniają $\rho(p_i, q_i)<\alpha$ dla $i=1, \ldots, j-1$.\\
+    Zauważmy teraz, że każdy co najwyżej $m-1$-elementowy podzbiór punktów $p_1, \ldots, p_{j-1}$ jest afinicznie niezależny, oraz że będą one rozpinały przestrzeń afiniczną wymiaru co najwyżej $m-1$. Czyli jest to zbiór nigdzie gęsty w $\mathbb{R}^m$. Ponieważ wszystkich takich podzbiorów jest skończenie wiele, to suma przestrzeni afinicznych rozpiętych na nich również będzie nigdzie gęsta. Wynika z tego, jesteśmy w stanie znaleźć taki punkt $p_j$ poza tym zbiorem, który będzie spełniał $\rho (p_j, q_j)<\alpha$.\\
     \\
-    Zauważmy teraz, że dowód dla $l>0$ przebiega analogicznie, każdy punkt $p_j$, $j=1, \ldots, k$ dobieramy tak by tworzył z punktami $r_1, \ldots, r_l, p_1, \ldots p_{j-1}$ układ w położnieniu ogólnym. 
+    Zauważmy teraz, że dowód dla $l>0$ przebiega analogicznie, każdy punkt $p_j$, $j=1, \ldots, k$ dobieramy tak by tworzył z punktami $r_1, \ldots, r_l, p_1, \ldots p_{j-1}$ układ w położeniu ogólnym. 
     \begin{figure}[H]
         \centering
         \input{pictures/konstrukcja.tex}
@@ -56,7 +56,7 @@
 \section{Twierdzenie o zanużeniu w $R^{2n+1}$}
 
 \begin{twie}
-    Niech $\mathcal{U}=\{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$. Jeżeli krotność pokrycia $\mathcal{U}$ jest conajwyżej $n$, to nerw pokrycia $\mathcal{N(U)}$ możemy zrealizować w $\mathbb{R}^{2n+1}$. \\
+    Niech $\mathcal{U}=\{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$. Jeżeli krotność pokrycia $\mathcal{U}$ jest co najwyżej $n$, to nerw pokrycia $\mathcal{N(U)}$ możemy zrealizować w $\mathbb{R}^{2n+1}$. \\
     Ponadto, mając:
     \begin{itemize}
         \item $H$ - n-wymiarową podprzestrzeń afiniczną  $R^{2n+1}$,
@@ -78,7 +78,7 @@
         \Delta (p_{i_0},\ldots p_{i_l})\;\; | \;\; U_{i_0}\cap\cdots \cap U_{i_l}\ne \emptyset
     \}
     \]
-    Teraz pozostaje pokazć, że tak zdefiniowana rodzina jest nerwem $\mathcal{N(U)}$ oraz że $\mathcal{N(U)}\cap H=\emptyset$.\\
+    Teraz pozostaje pokazać, że tak zdefiniowana rodzina jest nerwem $\mathcal{N(U)}$ oraz że $\mathcal{N(U)}\cap H=\emptyset$.\\
     Zauważmy, że do pokazania że $\mathcal{K}$ jest nerwem, jedyne co trzeba pokazać to że $\mathcal{K}$ jest kompleksem symplicjalnym, czyli że 
     \begin{enumerate}
         \item dla każdego sympleksu $S\in \mathcal{K}$ każda jego ściana $S'$ również spełnia $S'\in \mathcal{K}$
@@ -109,7 +109,7 @@
     \sum _{s=a}^l \lambda_sp_{i_s}- \sum _{t=a}^m \lambda'_tp_{i_t} = 
     0\]
     Zauważmy, że skoro $l, m\le n$, czyli $2+m+l\le 2n+2$, to punkty 
-    $p_{i_0}, \ldots, p_{i_l},p_{j_a}\ldots ,p_{j_m}$ będą tworzyły układ afinicznie niezależny, z czego wynika że wszystkie wpółczynniki w powyższym równianiu muszą być równe 0, za czym idzie:
+    $p_{i_0}, \ldots, p_{i_l},p_{j_a}\ldots ,p_{j_m}$ będą tworzyły układ afinicznie niezależny, z czego wynika że wszystkie współczynniki w powyższym równaniu muszą być równe 0, za czym idzie:
     \[\lambda_s=\lambda'_s,  \;\;\mathrm{dla}\;\;s=0,\ldots, a-1 \]
     \[\lambda_s = 0, \;\;\mathrm{dla}\;\;s=a, \ldots,l\]
     \[\lambda'_s=0,  \;\;\mathrm{dla}\;\;\;s=a,\ldots, m\]
