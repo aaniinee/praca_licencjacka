@@ -24,8 +24,8 @@ Teraz wprowadzimy kilka pomocniczych definicji.
 \begin{defi}
     \emph{k-Wymiarową ścianą} n-sympleksu rozpiętego na punktach $p_0, p_1, \ldots, p_n$ $(0\le k\le n)$ nazwiemy każdy k-sympleks rozpięty na punktach $p_{i_0}, p_{i_1},\ldots, p_{i_k}$ dla parami różnych $0\le i_j\le n$, $0\le j\le k$.\\
     0-wymiarowe ściany nazwiemy \emph{wierzchołkami}, 
-    \emph{brzegiem} nazwiemy zbiór $S$ - zbiór wszystkich k-wymiarowych ścian,
-    dopełnienie brzegu - \emph{wnętrzem}.
+    \emph{brzegiem} n-sympleksu nazwiemy zbiór $S$ będący sumą wszystkich k-wymiarowych ścian, $ k<n$,
+    a dopełnienie brzegu nazwiemy \emph{wnętrzem}.
 \end{defi}
 
 \section{Wielościany}
@@ -51,7 +51,7 @@ Teraz wprowadzimy kilka pomocniczych definicji.
 \end{defi}
 
 \begin{defi}
-    Każdy zbiór $W\in R^n$ dla którego istnieje kompleks symplicjalny $\mathcal{K}$ taki, że $W=|\mathcal{K}|$ 
+    Każdy zbiór $W\subset\mathbb{R}^n$ dla którego istnieje kompleks symplicjalny $\mathcal{K}$ taki, że $W=|\mathcal{K}|$ 
     nazwiemy \emph{wielościanem}. $\mathcal{K}$ nazwiemy \emph{triangulacją}.
 \end{defi}
 Przez wymiar wielościanu, uznamy wymiar 
@@ -61,7 +61,9 @@ zawierającego się w jego triangulacji. Łatwo możemy pokazać, że tak wybran
 Warto zauważyć, że współrzędne barycentryczne można przedłużyć z sympleksów do całego wielościanu:\\ mając wielościan $K=|\mathcal{K}|$ kompleksu $\mathcal{K}$ oraz jego wierzchołki $p_0, \ldots, p_k$ każdy punkt $p\in K$ możemy reprezentować przez
 \[p=\lambda_0 p_0+\cdots +\lambda_k p_k\]
 dla $\lambda_0 +\cdots +\lambda_k=1$ oraz $\lambda_i\ge 0\;\;\; \forall i=0, \ldots, k$.
-Oczywiście też, jeżeli $\lambda_{i_j}>0$, $j=0, \ldots, l$ to punkt $p$ musi zawierać się w $l-$sympleksie $\Delta(p_{i_0}, \ldots, p_{i_l})$. Jest to również najmniejszy (ze względu na wymiar) sympleks zawierający punkt $p$.\\
+Oczywiście też, jeżeli $\lambda_{i_j}>0$, $j=0, \ldots, l$ to punkt $p$ musi zawierać się w $l-$sympleksie $\Delta(p_{i_0}, \ldots, p_{i_l})$.  
+Jest to również najmniejszy (ze względu na wymiar) sympleks zawierający punkt $p$.\\
+Zauważmy jednak, że w tej definicji wymagamy, by dla każdego punktu $p$ w kompleksie, spełnione było by nośnik współrzędnych, czyli $\{p_i \;|\; \lambda_i(p)>0\}$, był zawarty w pewnym sympleksie kompleksu. W przeciwnym wypadku nie możemy zagwarantować jednoznaczności tego zapisu.\\
 Korzystając z tak wprowadzonych współczynników, zdefiniujemy tak zwane \emph{gwiazdy}.
 
 \begin{defi}

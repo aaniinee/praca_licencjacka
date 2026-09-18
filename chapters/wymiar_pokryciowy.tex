@@ -39,7 +39,7 @@ Teraz zdefiniujemy pojęcie, które będzie kluczowe w definicji wymiaru pokryci
 \begin{wnio}
     Dla rodziny o krotności $n$, przecięcie każdych $n+2$ parami różnych elementów jest puste.
 \end{wnio}
-Możemy łatwo zauważyć, że rodzina o krotności $-1$ musi zawierać jedynie zbiory puste, a rodzina o krotności 0 stwożona jest ze zbiorów parami rozłącznych, w których nie wszystkie są puste.
+Możemy łatwo zauważyć, że rodzina o krotności $-1$ musi zawierać jedynie zbiory puste, a rodzina o krotności 0 stworzona jest ze zbiorów parami rozłącznych, w których nie wszystkie są puste.
 \\
 Teraz możemy przejść do wprowadzenia naszej definicji.
 
@@ -47,16 +47,16 @@ Teraz możemy przejść do wprowadzenia naszej definicji.
 \begin{defi}    
     \emph{Wymiarem pokryciowym} przestrzeni normalnej $X$ (ozn. $\dim X)$ nazwiemy liczbę całkowitą $\geq -1$ lub $\infty$ spełniającą następujące własności:
     \begin{itemize}
-        \item[(ČL1)] $\dim X\leq n$ dla $n=-1,0,1,\cdots$, jeśli dla każdego skończonego otwartego pokrycia przestrzeni $X$ istnieje skończone wpisanie krotności $\leq n$,
+        \item[(ČL1)] $\dim X\leq n$ dla $n=-1,0,1,\cdots$, jeśli dla każdego skończonego otwartego pokrycia przestrzeni $X$ istnieje skończone otwarte wpisanie krotności $\leq n$,
         \item[(ČL2)] $\dim X=n$ jeżeli spełnione są nierówności $\dim X\leq n$ oraz $\dim X> n-1$,
         \item[(ČL3)] $\dim X=\infty$, jeżeli dla każdego $n=-1,0,1,\ldots$ zachodzi $\dim X >n$.
     \end{itemize} 
 \end{defi}
-\emph{ČL} pochodzi tutaj od nazwisk Čech i Lebesque, którzy, jak wspomniane było wcześniej, jako pierwsi wprowadzili definicję wymiaru pokryciowego.\\
-Łatwo możemy zauważyć, że jeżeli przestrzenie $X$ i $Y$ są homeomorficzne, to oczywiście spełniają $\dim X = \dim Y$, kożystamy tutaj z własności zamknięcia homeomorfizmu na zbiory otwarte, jak również że dla wszystkich przestrzeni euklidesowych 
+\emph{ČL} pochodzi tutaj od nazwisk Čech i Lebesgue, którzy, jak wspomniane było wcześniej, jako pierwsi wprowadzili definicję wymiaru pokryciowego.\\
+Łatwo możemy zauważyć, że jeżeli przestrzenie $X$ i $Y$ są homeomorficzne, to oczywiście spełniają $\dim X = \dim Y$, korzystamy tutaj z własności zamknięcia homeomorfizmu na zbiory otwarte, jak również że dla wszystkich przestrzeni euklidesowych 
 $\dim \mathbb{R}^n=n$, która została udowodniona w \cite{bro1913} (pokazane zostało $\dim I^n=n$).
 \begin{przy}
-    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy jak na rusunku \ref{fig:wymiar_1}, które jest oczywiście krotności 1. 
+    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy jak na rysunku \ref{fig:wymiar_1}, które jest oczywiście krotności 1. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{pictures/wymiar_1.png}
@@ -76,7 +76,7 @@ $\dim \mathbb{R}^n=n$, która została udowodniona w \cite{bro1913} (pokazane zo
     \end{figure}
 \end{przy}
 \section{Twierdzenia}
-Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisań możemy szukać zwężeń, drugie pokazuje, że nie musimy pokazywać instnienia zwężeń dla pokryć o dowolnie dużej liczbie elementów, tylko rozważać jedynie te o ograniczonej.
+Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisań możemy szukać zwężeń, drugie pokazuje, że nie musimy pokazywać istnienia zwężeń dla pokryć o dowolnie dużej liczbie elementów, tylko rozważać jedynie te o ograniczonej.
 \begin{twie} % 1.6.8
     Dla każdej przestrzeni normalnej $X$ następujące warunki są równoważne:
     \begin{itemize}
@@ -89,13 +89,13 @@ Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisa
     Zacznijmy od zauważenia, iż implikacje (i)$\Rightarrow$(ii), (ii)$\Rightarrow$(i) oraz (iii)$\Rightarrow$(i) są oczywiste, pierwsze dwie wynikają wprost z definicji wymiaru pokryciowego, w trzeciej musimy zauważyć, że każde zwężenie jest również wpisaniem. \\
     Pozostaje w takim razie pokazać implikację (ii)$\Rightarrow$(iii).\\
     Weźmy przestrzeń normalną $X$ spełniającą (ii), oraz niech $\mathcal{U}=\{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni $X$. Wiemy, że istnieje $\mathcal{V}$ - otwarte wpisanie pokrycia $\mathcal{U}$ spełniające $\ord \mathcal{V}\leq n$. Teraz z tego wpisania skonstruujemy zwężenie pokrycia $\mathcal{U}$ krotności $n$.\\
-    Zaczniemy od zdefiniowania przypożądkowania $i(V)$ - taki indeks z przedziału $\{1,\ldots k\}$, dla którego $V\subset U_{i(V)}$. Teraz dla każdego $i\in \{1, \ldots, k\}$ zdefiniujmy $V_i = \bigcup\{V\;|\;i=i(V)\}$. Pokażemy, że tak zdefiniowana rodzina $\tilde{\mathcal{V}}=\{V_i\}_{i=1}^k$ jest szukanym zwężeniem. \\
+    Zaczniemy od zdefiniowania przyporządkowania $i(V)$ - taki indeks z przedziału $\{1,\ldots k\}$, dla którego $V\subset U_{i(V)}$. Teraz dla każdego $i\in \{1, \ldots, k\}$ zdefiniujmy $V_i = \bigcup\{V\;|\;i=i(V)\}$. Pokażemy, że tak zdefiniowana rodzina $\tilde{\mathcal{V}}=\{V_i\}_{i=1}^k$ jest szukanym zwężeniem. \\
     Oczywiście $\forall_i\;V_i\subset U_i$ oraz $\tilde{\mathcal{V}}$ jest pokryciem przestrzeni $X$. Pozostaje więc pokazać, że $\ord \tilde{\mathcal{V}}\le n$, jednak to wynika wprost z prostej teorii zbiorów oraz $\ord\mathcal{V}\le n$ (czyli że przecięcie każdych $n+2$ parami różnych elementów $\mathcal{V}$ jest puste), co kończy dowód. 
 
 \end{proof}
 
 \begin{twie} %1.6.9
-    Przestrzeń normalna $X$ ma wymiar pokryciowy $\dim X \leq n $ wtedy i tylko wtedy, gdy dla każdego $n+2$ elementowego otwartego pokrycia przestrzeni $X$, $\{U_i\} _{i=1}^{n+2}$, istnieje otwarte zwężenie $ \{W_i\} _{i=1}^{n+2}$ o krotności $\ord W\le n$, spełniające $\bigcap_{i=1}^{n+2} W_i = \emptyset$.
+    Przestrzeń normalna $X$ ma wymiar pokryciowy $\dim X \leq n $ wtedy i tylko wtedy, gdy dla każdego $n+2$-elementowego otwartego pokrycia przestrzeni $X$, $\{U_i\} _{i=1}^{n+2}$, istnieje otwarte zwężenie $ \{W_i\} _{i=1}^{n+2}$ o krotności $\ord W\le n$, spełniające $\bigcap_{i=1}^{n+2} W_i = \emptyset$.
 \end{twie}
 \begin{proof}
     Zauważmy, że do dowodu tego twierdzenia wystarczy pokazać, że jeżeli przestrzeń normalna $X$ ma wymiar pokryciowy większy od $n$, to jesteśmy w stanie znaleźć $\mathcal{U}=\{U_i\}_{i=1}^{n+2}$ - takie otwarte pokrycie $n+2$-elementowe, że każde jego otwarte zwężenie $\mathcal{W}=\{W_i\}_{i=1}^{n+2}$ spełnia $\bigcap\mathcal{W}\ne \emptyset$.\\
@@ -132,7 +132,7 @@ Tak jak wspomniane było we wstępie, poza wymiarem pokryciowym często mówimy 
     \emph{Małym wymiarem indukcyjnym} przestrzeni regularnej $X$ (oznaczamy $\ind  X$) nazwiemy liczbę całkowitą co najmniej $-1$ bądź $\infty$ spełniającą:
     \begin{itemize}
         \item[(MU1)] $\ind X = -1$ wtedy i tylko gdy przestrzeń $X$ jest pusta,
-        \item[(MU2)] $\ind X\le n$ dla $n=0,1,\ldots$ jeżeli dla każdego punktu $x\in X$ i każdego jego otoczenia $V$ istnieje pewnien zbiór otwarty $U\subset X$ spełniający
+        \item[(MU2)] $\ind X\le n$ dla $n=0,1,\ldots$ jeżeli dla każdego punktu $x\in X$ i każdego jego otoczenia $V$ istnieje pewien zbiór otwarty $U\subset X$ spełniający
         \[x\in U\subset V\;\;\;\mathrm{oraz}\;\;\; \ind \Fr U \le n-1,\]
         \item[(MU3)] $\ind X=n$ jeżeli zachodzą nierówności $\ind X\leq n$ oraz $\ind X> n-1$,
         \item[(MU4)] $\ind X=\infty$, jeżeli dla każdego $n=-1,0,1,\ldots$ zachodzi $\ind X >n$.
@@ -148,21 +148,21 @@ Udowodnione też zostało twierdzenie o podzbiorze:
 \begin{proof}
     odsyłam do dowodu twierdzenia 1.1.2 w \cite{engelking1995}.
 \end{proof}
-Łatwo możemy zauważyć że podobna własność spełniona będzie dla wymiaru pokryciowego, czyli że dla każdej podrzestrzeni z topologią dziedziczoną $M$ przestrzeni $X$ spełnione będzie $\dim M\le \dim X$.
+Łatwo możemy zauważyć że podobna własność spełniona będzie dla wymiaru pokryciowego, czyli że dla każdej podprzestrzeni z topologią dziedziczoną $M$ przestrzeni $X$ spełnione będzie $\dim M\le \dim X$.
 
 Przejdziemy teraz do kolejnej definicji.
 \begin{defi}
     \emph{Dużym wymiarem indukcyjnym} przestrzeni normalnej $X$, (oznaczamy $\Ind X$) nazwiemy liczbę całkowitą co najmniej $-1$ bądź $\infty$ spełniającą:
     \begin{itemize}
         \item[(BČ1)] $\Ind X = -1$ wtedy i tylko gdy przestrzeń $X$ jest pusta,
-        \item[(BČ2)] $\Ind X\le n$ dla $n=0,1,\ldots$ jeżeli dla każdego zbioru domkniętego $A$ w $X$ i każdego jego otwartego otoczenia $V$ istnieje pewnien zbiór otwarty $U\subset X$ spełniający
+        \item[(BČ2)] $\Ind X\le n$ dla $n=0,1,\ldots$ jeżeli dla każdego zbioru domkniętego $A$ w $X$ i każdego jego otwartego otoczenia $V$ istnieje pewien zbiór otwarty $U\subset X$ spełniający
         \[A\subset  U\subset V\;\;\;\mathrm{oraz}\;\;\; \Ind \Fr U \le n-1,\]
         \item[(BČ3)] $\Ind X=n$ jeżeli zachodzą nierówności $n-1<\Ind X $ oraz $\Ind X \le n$,
         \item[(BČ4)] $\Ind X=\infty$, jeżeli dla każdego $n=-1,0,1,\ldots$ zachodzi $\Ind X >n$.
     \end{itemize}
 \end{defi}
-Skrót \emph{BČ} pochodzi tutaj od nazwisk Brouver i Čech \cite{bro1913}, \cite{cech1993}. 
-Łatwo możemy pokazać, że podobnie jak dla poprzedniej definicji, dla homeomorficznych przestrzeni normalnych $X\cong Y$ zachodzi $\Ind X=\ind Y$. Oczywiście też dla każdej przestrzeni normalnej $X$ spełniona jest nierówność $\ind X\le \Ind X$, 
+Skrót \emph{BČ} pochodzi tutaj od nazwisk Brouwer i Čech \cite{bro1913}, \cite{cech1993}. 
+Łatwo możemy pokazać, że podobnie jak dla poprzedniej definicji, dla homeomorficznych przestrzeni normalnych $X\cong Y$ zachodzi $\Ind X=\Ind Y$. Oczywiście też dla każdej przestrzeni normalnej $X$ spełniona jest nierówność $\ind X\le \Ind X$, 
 jako iż warunek (BČ2) w definicji $\Ind$ implikuje warunek (MU2) w $\ind$.
 
 Ważne twierdzenie, wiążące te trzy wymiary ze sobą to:
