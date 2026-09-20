@@ -12,7 +12,7 @@ Podana własność często jest również nazywana własnością \emph{T4}. Dla 
 \end{defi}
 
 \begin{defi}
-    Pokrycie $\mathcal{B}$ jest \emph{wpisane} w pokrycia $\mathcal{A}$ tej samej przestrzeni $X$, jeżeli dla każdego $B\in \mathcal{B}$ istnieje $A\in \mathcal{A}$, takie że $B\subset A$.
+    Pokrycie $\mathcal{B}$ jest \emph{wpisane} w pokrycie $\mathcal{A}$ tej samej przestrzeni $X$, jeżeli dla każdego $B\in \mathcal{B}$ istnieje $A\in \mathcal{A}$, takie że $B\subset A$.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{pictures/wpisanie_przy.png}
@@ -25,7 +25,7 @@ Podana własność często jest również nazywana własnością \emph{T4}. Dla 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{pictures/zwerzenie_przy.png}
-        \caption{zwężenie}
+        \caption{Zwężenie}
         \label{fig:zwerz}
     \end{figure}
 \end{defi}
@@ -34,7 +34,7 @@ Zauważmy, że każde zwężenie jest również wpisaniem.
 % \subsection{Krotność}
 Teraz zdefiniujemy pojęcie, które będzie kluczowe w definicji wymiaru pokryciowego.
 \begin{defi}
-    Niech $X$ będzie zbiorem a $A$ niech będzie rodziną podzbiorów $X$. Wtedy \emph{krotnością} rodziny $A$ (ozn. $\ord A$) nazwiemy największe takie całkowite $n$, że $A$ zawiera $n+1$ zbiorów z niepustym przecięciem. Gdy takie $n$ nie istnieje, powiemy że $\ord A=\infty$.  
+    Niech $X$ będzie zbiorem, a $A$ niech będzie rodziną podzbiorów $X$. Wtedy \emph{krotnością} rodziny $A$ (ozn. $\ord A$) nazwiemy największe takie całkowite $n$, że $A$ zawiera $n+1$ zbiorów z niepustym przecięciem. Gdy takie $n$ nie istnieje, powiemy że $\ord A=\infty$.  
 \end{defi}
 \begin{wnio}
     Dla rodziny o krotności $n$, przecięcie każdych $n+2$ parami różnych elementów jest puste.
@@ -56,7 +56,7 @@ Teraz możemy przejść do wprowadzenia naszej definicji.
 Łatwo możemy zauważyć, że jeżeli przestrzenie $X$ i $Y$ są homeomorficzne, to oczywiście spełniają $\dim X = \dim Y$, korzystamy tutaj z własności zamknięcia homeomorfizmu na zbiory otwarte, jak również że dla wszystkich przestrzeni euklidesowych 
 $\dim \mathbb{R}^n=n$, która została udowodniona w \cite{bro1913} (pokazane zostało $\dim I^n=n$).
 \begin{przy}
-    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy jak na rysunku \ref{fig:wymiar_1}, które jest oczywiście krotności 1. 
+    Zobaczmy, że dla każdego pokrycia przestrzeni euklidesowej $\mathbb{R}^1\cong \mathbb{R}$, znajdziemy wpisanie skonstruowane w sposób pokazany na rysunku \ref{fig:wymiar_1}, które jest oczywiście krotności 1. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{pictures/wymiar_1.png}
@@ -90,8 +90,7 @@ Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisa
     Pozostaje w takim razie pokazać implikację (ii)$\Rightarrow$(iii).\\
     Weźmy przestrzeń normalną $X$ spełniającą (ii), oraz niech $\mathcal{U}=\{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni $X$. Wiemy, że istnieje $\mathcal{V}$ - otwarte wpisanie pokrycia $\mathcal{U}$ spełniające $\ord \mathcal{V}\leq n$. Teraz z tego wpisania skonstruujemy zwężenie pokrycia $\mathcal{U}$ krotności $n$.\\
     Zaczniemy od zdefiniowania przyporządkowania $i(V)$ - taki indeks z przedziału $\{1,\ldots k\}$, dla którego $V\subset U_{i(V)}$. Teraz dla każdego $i\in \{1, \ldots, k\}$ zdefiniujmy $V_i = \bigcup\{V\;|\;i=i(V)\}$. Pokażemy, że tak zdefiniowana rodzina $\tilde{\mathcal{V}}=\{V_i\}_{i=1}^k$ jest szukanym zwężeniem. \\
-    Oczywiście $\forall_i\;V_i\subset U_i$ oraz $\tilde{\mathcal{V}}$ jest pokryciem przestrzeni $X$. Pozostaje więc pokazać, że $\ord \tilde{\mathcal{V}}\le n$, jednak to wynika wprost z prostej teorii zbiorów oraz $\ord\mathcal{V}\le n$ (czyli że przecięcie każdych $n+2$ parami różnych elementów $\mathcal{V}$ jest puste), co kończy dowód. 
-
+    Oczywiście $\forall_i\;V_i\subset U_i$ oraz $\tilde{\mathcal{V}}$ jest pokryciem przestrzeni $X$. Pozostaje więc pokazać, że $\ord \tilde{\mathcal{V}}\le n$, jednak to wynika wprost z prostej teorii zbiorów oraz $\ord\mathcal{V}\le n$ (czyli że przecięcie każdych $n+2$ parami różnych elementów $\mathcal{V}$ jest puste), co kończy dowód.
 \end{proof}
 
 \begin{twie} %1.6.9
@@ -100,7 +99,7 @@ Pokażemy teraz dwa twierdzenia, pierwsze mówi o tym, że zamiast szukać wpisa
 \begin{proof}
     Zauważmy, że do dowodu tego twierdzenia wystarczy pokazać, że jeżeli przestrzeń normalna $X$ ma wymiar pokryciowy większy od $n$, to jesteśmy w stanie znaleźć $\mathcal{U}=\{U_i\}_{i=1}^{n+2}$ - takie otwarte pokrycie $n+2$-elementowe, że każde jego otwarte zwężenie $\mathcal{W}=\{W_i\}_{i=1}^{n+2}$ spełnia $\bigcap\mathcal{W}\ne \emptyset$.\\
     Teraz mamy $\dim X>n$, więc wiemy że możemy znaleźć takie otwarte pokrycie $\mathcal{V}=\{V_i\}_{i=1}^{k}$ przestrzeni $X$, dla którego nie istnieje otwarte zwężenie krotności $\le n$. \\
-    Do tego, możemy założyć, że jeżeli $\mathcal{V}' = \{V_i'\}_{i=1}^k$ to otwarte zwężenie pokrycia $\mathcal{V}$, to spełnia ono: 
+    Do tego możemy założyć, że jeżeli $\mathcal{V}' = \{V_i'\}_{i=1}^k$ to otwarte zwężenie pokrycia $\mathcal{V}$, to spełnia ono: 
     \[V_{i_1}\cap V_{i_2} \cap \cdots \cap V_{i_m} \ne \emptyset\;\;\;\Rightarrow\;\;\;
     V'_{i_1}\cap V'_{i_2} \cap \cdots \cap V'_{i_m} \ne \emptyset.\]
     Jeżeli tak nie zachodzi, to zastępujemy $\mathcal{V}$ przez $\mathcal{V'}$. Liczba różnych przecięć jest skończona, więc po skończonej liczbie podstawień ustatkujemy się (przy każdym podstawieniu eliminujemy co najmniej jedną sprzeczną implikację).\\
@@ -162,7 +161,7 @@ Przejdziemy teraz do kolejnej definicji.
     \end{itemize}
 \end{defi}
 Skrót \emph{BČ} pochodzi tutaj od nazwisk Brouwer i Čech \cite{bro1913}, \cite{cech1993}. 
-Łatwo możemy pokazać, że podobnie jak dla poprzedniej definicji, dla homeomorficznych przestrzeni normalnych $X\cong Y$ zachodzi $\Ind X=\Ind Y$. Oczywiście też dla każdej przestrzeni normalnej $X$ spełniona jest nierówność $\ind X\le \Ind X$, 
+Łatwo możemy pokazać, że podobnie jak dla poprzedniej definicji, dla homeomorficznych przestrzeni normalnych $X\cong Y$ zachodzi $\Ind X=\Ind Y$. Oczywiście też dla każdej przestrzeni normalnej $X$ spełniona jest również nierówność $\ind X\le \Ind X$, 
 jako iż warunek (BČ2) w definicji $\Ind$ implikuje warunek (MU2) w $\ind$.
 
 Ważne twierdzenie, wiążące te trzy wymiary ze sobą to:
@@ -173,5 +172,5 @@ Ważne twierdzenie, wiążące te trzy wymiary ze sobą to:
 \begin{proof}
     dowód możemy znaleźć w \cite{hurewicz1941}.
 \end{proof}
-Mimo że na przestrzeniach metrycznych ośrodkowych te wymiary pokrywają się, w ogólności, na dużo bardziej skomplikowanych przestrzeniach przestają mieć taką samą wartość.
+Mimo że dla przestrzeni metrycznych ośrodkowych te wymiary pokrywają się, w ogólności, na dużo bardziej skomplikowanych przestrzeniach, przestają mieć taką samą wartość.
 Wiemy jednak, że dla przestrzeni \emph{T1} spełnione są $\ind X \le \Ind X$, a dla przestrzeni normalnych $\dim X\le \Ind X$.

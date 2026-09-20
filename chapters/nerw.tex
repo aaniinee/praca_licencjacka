@@ -43,7 +43,7 @@
     Niech $\mathcal{U} = \{U_i\}_{i=1}^k$ będzie skończonym otwartym pokryciem przestrzeni topologicznej $X$.
     \emph{Nerwem} pokrycia $\mathcal{U}$ nazwiemy dowolny kompleks symplicjalny $\mathcal{N(U)}$, 
     którego wierzchołki możemy ustawić w ciąg $p_1, p_2, \ldots, p_k$ w taki sposób, że
-    \[p_{i_0}p_{i_1} \ldots p_{i_m}\in \mathcal{N(U)} \Leftrightarrow U_{i_0}\cap U_{i_1}\cap \cdots \cap U_{i_m}\neq \emptyset. \]
+    \[p_{i_0}p_{i_1} \ldots p_{i_m}\in \mathcal{N(U)} \Longleftrightarrow U_{i_0}\cap U_{i_1}\cap \cdots \cap U_{i_m}\neq \emptyset. \]
     \begin{figure}[H]
         \centering
         % \includegraphics[width=0.8\textwidth]{pictures/nerw_2.png}
@@ -90,9 +90,10 @@
     Dowód 2:\\
     Weźmy $S_1, S_2\in \mathcal{K}$, $S_1$ oparty na $p_{i_0}, \ldots, p_{i_l}$, $S_2$ oparty na $p_{j_0}, \ldots, p_{j_m}$, $l, m\le n$.\\
     Załóżmy, że sympleksy oparte są na dokładnie $0\le a\le \min(l+1, m+1)$ takich samych wierzchołkach. Możemy w takim razie tak je przeindeksować, by spełnione było:
-    \[p_{i_s}=p_{j_s} \;\; \mathrm{dla} \;\;s=0,1,\ldots, a-1\]
+    \[p_{i_s}=p_{j_s} \;\; \mathrm{dla} \;\;s=0,1,\ldots, a-1,\]
+    oraz by punkty
     \[p_{i_a}, \ldots, p_{i_l}, p_{j_a},\ldots,  p_{j_m}\]
-    parami różne.\\
+    były parami różne.\\
     Weźmy dowolny punkt $p$ należący do przecięcia $S_1\cap S_2$. Zauważmy że skoro $p\in S_1$, to możemy przedstawić punkt $p$ jako:
     \[p=\sum _{s=0}^l \lambda_sp_{i_s}, \;\; \sum_{s=0}^l\lambda_s=1,
     \lambda_s\ge 0\forall_{s=0,1, \ldots, l} \]
@@ -115,7 +116,7 @@
     \[\lambda'_s=0,  \;\;\mathrm{dla}\;\;\;s=a,\ldots, m\]
     W takim razie punkt $p$ możemy rozpisać jako
     \[p=\sum_{s=0}^{a-1}\lambda_sp_{i_s}=\sum_{s=0}^{a-1}\lambda'_sp_{j_s}\]
-    czyli dla $a>0$ punkt $p$ należy również do sympleksu opartego na $p_{i_0}, \ldots, p_{i_{a-1}}$, który jest ścianą obu sympleksów $S_1, S_2$. Zauważmy, że jeżeli $a=0$, to oczywiście układ $p_{i_0}, \ldots, p_{i_l},p_{j_0}\ldots ,p_{j_m}$ będzie afinicznie niezależny, za czym idzie że wszystkie współczynniki muszą być zerowe, co jest sprzeczne z tym że ich suma jest równa $1$. Więc sympleksy $S_1$ i $S_2$ muszą mieć puste przecięcie, co kończy dowód.
+    czyli dla $a>0$ punkt $p$ należy również do sympleksu opartego na $p_{i_0}, \ldots, p_{i_{a-1}}$, który jest ścianą obu sympleksów $S_1, S_2$. Zauważmy, że jeżeli $a=0$, to oczywiście układ $p_{i_0}, \ldots, p_{i_l},p_{j_0}\ldots ,p_{j_m}$ będzie afinicznie niezależny, za czym idzie że wszystkie współczynniki muszą być zerowe, co jest sprzeczne z tym że ich suma jest równa $1$. Więc sympleksy $S_1$ i $S_2$ muszą mieć puste przecięcie, co kończy dowód.\\
     Wynika z tego, że $\mathcal{K}$ faktycznie jest nerwem pokrycia~$\mathcal{U}$.\\
     Do skończenia dowodu twierdzenia wystarczy pokazać, że $H\cap \mathcal{K}=\emptyset$, jest to jednak analogiczne do powyższego.
 \end{proof}
