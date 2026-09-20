@@ -97,9 +97,11 @@ W takim razie, do dokończenia dowodów, jedyne co zostaje nam pokazać, to że 
     Taką funkcję nazwiemy funkcją \emph{$\kappa$-Kuratowskiego}.
     \cite{kuratowski1933}
 \end{defi}
-Zacznijmy od pokazania, że tak zdefiniowana funkcja jest dobrze określona, jako że jeżeli $x\in X$ należy do $U_i$, to $\rho(x, X\backslash U_i)>0$, za czym idzie 
-$\sum _{j=1}^k\rho(x, X\backslash U_j)>0 \;\;\;\forall x\in X$, ponieważ $\mathcal{U}$ jest pokryciem.\\
+Zauważmy, że w tej definicji może zdarzyć się, że element pokrycia będzie równy całej przestrzeni $X$, czyli $U_i=X$, wtedy we wzorze pojawi się odległość punktu od zbioru pustego. By uniknąć tego problemu, skorzystamy z definicji funkcji $\rho$ zdefiniowanej w \cite{engelking1989}, dla której przyjmujemy $\rho(x, \emptyset)=1$.\\
+Zwróćmy uwagę na to, że tak zdefiniowana funkcja jest dobrze określona, jako że jeżeli $x\in X$ należy do $U_i$, to $\rho(x, X\backslash U_i)>0$, za czym idzie 
+$\sum _{j=1}^k\rho(x, X\backslash U_j)>0 \;\;\;\forall x\in X$, ponieważ $\mathcal{U}$ jest pokryciem.\\ 
 Własnością na którą warto zwrócić uwagę, jest to dla każdego $x\in X$ zachodzi $\sum_{i=1}^{k}\kappa_i(x)=1$, oraz oczywiście wszystkie $\kappa_i(x)\ge 0$.\\
+Warto również pokazać, że przekształcenie $\kappa$ rzeczywiście jest ciągłe. To wynika jednak wprost z ciągłości funkcji $\rho(\cdot, A)$ dla ustalonego zbioru $A$, oraz oczywiście z tego, że złożenie funkcji ciągłych również jest funkcją ciągłą.\\
 
 Udowodnimy teraz dwa twierdzenia, pierwsze mówi o przybliżaniu ciągłych przekształceń funkcjami $\kappa-$Kuratowskiego, a drugie jest o własnościach tej funkcji.
 
@@ -164,7 +166,7 @@ Możemy w takim razie przejść do dowodu finalnego twierdzenia.
     $(\Leftarrow)$\\
     Podobnie jak w poprzednim twierdzeniu, tą część udowodniliśmy już wcześniej w \ref{twie:1_10_12}. Pozostaje w takim razie druga implikacja.\\
     $(\Rightarrow)$\\
-    Mamy zwartą przestrzeń metryczną $X$ o wymiarze pokryciowym $\dim X\le n$ oraz ustalmy liczbę $\varepsilon>0$. Weźmy pokrycie $\mathcal{U}$ będące skończonym wpisaniem pokrycia $\{ \mathcal{B}(x, \frac{\varepsilon}{3}) \}_{x\in X}$. Z twierdzenia \ref{twie:o_map} wiemy, że możemy znaleźć $\mathcal{U}$-mapę $f:X\rightarrow Y$  przestrzeni $X$ w wielościan wymiaru co najwyżej $n$. Pozostaje w takim razie pokazać, że jest to również $\varepsilon-$mapa. \\
+    Mamy zwartą przestrzeń metryczną $X$ o wymiarze pokryciowym $\dim X\le n$ oraz ustalmy liczbę $\varepsilon>0$. Weźmy pokrycie $\mathcal{U}$ będące skończonym wpisaniem pokrycia $\{ \mathcal{B}(x, \frac{\varepsilon}{3}) \}_{x\in X}$. Z twierdzenia \ref{twie:o_map} wiemy, że możemy znaleźć $\mathcal{U}$-mapę $f:X\rightarrow Y$  przestrzeni $X$ w wielościan wymiaru co najwyżej $n$. Pozostaje w takim razie pokazać, że jest to również $\varepsilon-$przekształceniem. \\
     Wiemy, że możemy znaleźć otwarte pokrycie $\mathcal{V}$ przestrzeni $Y$, dla którego $f^{-1}(\mathcal{V})$ jest wpisaniem $\mathcal{U}$, a z tego oczywiście dostajemy że dla każdego elementu pokrycia $V\in \mathcal{V}$ 
     \[\delta (f^{-1}(V))< \varepsilon\]
     oraz dla każdego elementu $y \in Y$
@@ -175,9 +177,14 @@ Możemy w takim razie przejść do dowodu finalnego twierdzenia.
 \section{Odwrócone ciągi wielościanów}
 Jednym z ważnych wniosków z twierdzenia \ref{twie:o_prz}, jest że klasa zwartych przestrzeni metrycznych o wymiarze pokryciowym co najwyżej $n$, pokrywa się z klasą przestrzeni homeomorficznych do granicy odwróconych ciągów wielościanów o wymiarze co najwyżej $n$. 
 \begin{defi}
-    Układem odwrotnym, $S = \{X_i, \pi_j^i, N\}$, gdzie $N$ jest zbiorem wszystkich dodatnich liczb dodatnich nazwiemy \emph{odwróconym ciągiem}, często oznaczanym po prostu jako $\{X_i, \pi_j^i\}$. \cite{engelking1989}
+    Układem odwrotnym, $S = \{X_i, \pi_j^i, N\}$, gdzie $N$ jest zbiorem wszystkich dodatnich liczb całkowitych nazwiemy \emph{odwróconym ciągiem}, często oznaczanym po prostu jako $\{X_i, \pi_j^i\}$. \cite{engelking1989}
 \end{defi}
 Tutaj $X_i$ są przestrzeniami topologicznymi, a funkcje $\pi _j^i:X_i \rightarrow X_j$ to ciągłe przekształcenia spełniające $\pi _j^i \pi_i^k = \pi _j^k$, oraz $\pi _i^i=\id_{X_i}$.
+
+\begin{defi}
+    Dla odwróconego ciągu $S = \{X_i, \pi_j^i, N\}$, \emph{nicią} nazwiemy element $\{x_i\}_{i\in N}$, $x_i \in X_i$, jeżeli dla każdych indeksów $i, j\in N$, $j\le i$ spełnione jest $\pi _j^i(x_i)=x_j$. Teraz podzbiór przestrzeni $\prod_{i\in N}X_i$, składający się ze wszystkich nici $S$ nazwiemy \emph{granicą odwrotną systemu odwrotnego $S$} (ozn. $\varprojlim S$).
+\end{defi}
+
 \begin{twie}
     Zwarta przestrzeń metryczna $X$ spełnia nierówność $\dim X\le n$ wtedy i tylko wtedy, gdy jest homeomorficzna do granicy odwróconego ciągu wielościanów o wymiarze $\le n$.
 \end{twie}
@@ -200,7 +207,8 @@ Pokażemy teraz kilka przykładów pokazujących użycie tego twierdzenia
 
 \begin{przy}
     Pokażemy, że zbiór \emph{Cantora} jest wymiaru 0. \\
-    $X_i$ to będą indeksowane od 0 zbiory dyskretne $2^i$, a funkcje $\pi _i^{i+1}$ będą określone przez równania $\pi _i^{i+1}(x_{i+1, 2j})= x_{i, j}$, $\pi _i^{i+1}(x_{i+1, 2j+1})= x_{i, j}$. Zauważmy, że dla takiego systemu, możemy znaleźć intuicyjny homeomorfizm między jego granicą a zbiorem cantora w reprezentacji korzystającej z systemu trójkowego.
+    $X_i$ to będą indeksowane od 0 zbiory dyskretne $2^i$-elementowe, a funkcje $\pi _i^{i+1}$ będą określone przez równania $\pi _i^{i+1}(x_{i+1, 2j})= x_{i, j}$, $\pi _i^{i+1}(x_{i+1, 2j+1})= x_{i, j}$. Zauważmy, że dla takiego systemu, możemy znaleźć homeomorfizm między jego granicą a zbiorem cantora w reprezentacji korzystającej z systemu trójkowego: wiemy, że każdą liczbę ze zbioru Cantora jako 
+    $\sum _{i=1}^\infty a_i \cdot \frac{1}{3^i}$, gdzie $a_i\in \{0,2\}$. Teraz, elementom każdej przestrzeni $X_i$ przyporządkujemy parami różne elementy $\{0,2\}^i$ tak by funkcje ${\pi}_i^{j}$ były rzutowaniami na pierwsze $i$ współrzędnych. Zauważmy że dla takiego przyporządkowania homeomorfizm między zbiorem Cantora a $\varprojlim \{X_i, \pi _i^j\}$ jest trywialny.
     \begin{figure}[H]
         \centering
         \input{pictures/cantor.tex}

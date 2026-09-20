@@ -97,16 +97,16 @@
     \[p=\sum _{s=0}^l \lambda_sp_{i_s}, \;\; \sum_{s=0}^l\lambda_s=1,
     \lambda_s\ge 0\forall_{s=0,1, \ldots, l} \]
     podobnie z $p\in S_2$ dostajemy:
-    \[p=\sum _{t=0}^m \lambda'_tp_{i_t}, \;\; \sum_{t=0}^m\lambda'_t=1,
+    \[p=\sum _{t=0}^m \lambda'_tp_{j_t}, \;\; \sum_{t=0}^m\lambda'_t=1,
     \lambda'_t\ge 0\forall_{t=0,1, \ldots, m} \]
     Dostajemy w takim razie układ równań:
-    \[\sum _{s=0}^l \lambda_sp_{i_s}- \sum _{t=0}^m \lambda'_tp_{i_t} = 
+    \[\sum _{s=0}^l \lambda_sp_{i_s}- \sum _{t=0}^m \lambda'_tp_{j_t} = 
     0\]
     \[\sum _{s=0}^l \lambda_s - \sum _{t=0}^m \lambda'_t = 0\]
     Pierwsze równanie możemy uprościć do postaci:
     \[
-    \sum _{s=0}^a (\lambda_s-\lambda'_s)p_{i_s} +
-    \sum _{s=a}^l \lambda_sp_{i_s}- \sum _{t=a}^m \lambda'_tp_{i_t} = 
+    \sum _{s=0}^{a-1} (\lambda_s-\lambda'_s)p_{i_s} +
+    \sum _{s=a}^l \lambda_sp_{i_s}- \sum _{t=a}^m \lambda'_tp_{j_t} = 
     0\]
     Zauważmy, że skoro $l, m\le n$, czyli $2+m+l\le 2n+2$, to punkty 
     $p_{i_0}, \ldots, p_{i_l},p_{j_a}\ldots ,p_{j_m}$ będą tworzyły układ afinicznie niezależny, z czego wynika że wszystkie współczynniki w powyższym równaniu muszą być równe 0, za czym idzie:
@@ -115,7 +115,7 @@
     \[\lambda'_s=0,  \;\;\mathrm{dla}\;\;\;s=a,\ldots, m\]
     W takim razie punkt $p$ możemy rozpisać jako
     \[p=\sum_{s=0}^{a-1}\lambda_sp_{i_s}=\sum_{s=0}^{a-1}\lambda'_sp_{j_s}\]
-    czyli punkt $p$ należy również do sympleksu opartego na $p_{i_0}, \ldots, p_{i_{a-1}}$, który jest ścianą obu sympleksów $S_1, S_2$, co kończy dowód.
+    czyli dla $a>0$ punkt $p$ należy również do sympleksu opartego na $p_{i_0}, \ldots, p_{i_{a-1}}$, który jest ścianą obu sympleksów $S_1, S_2$. Zauważmy, że jeżeli $a=0$, to oczywiście układ $p_{i_0}, \ldots, p_{i_l},p_{j_0}\ldots ,p_{j_m}$ będzie afinicznie niezależny, za czym idzie że wszystkie współczynniki muszą być zerowe, co jest sprzeczne z tym że ich suma jest równa $1$. Więc sympleksy $S_1$ i $S_2$ muszą mieć puste przecięcie, co kończy dowód.
     Wynika z tego, że $\mathcal{K}$ faktycznie jest nerwem pokrycia~$\mathcal{U}$.\\
     Do skończenia dowodu twierdzenia wystarczy pokazać, że $H\cap \mathcal{K}=\emptyset$, jest to jednak analogiczne do powyższego.
 \end{proof}
